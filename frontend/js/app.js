@@ -10,11 +10,13 @@ angular.module('myApp', ['ui.router']).config(function($stateProvider, $urlRoute
     })
     .state('demo', {
       url: '/',
-      templateUrl: './views/demo.html'
+      templateUrl: './views/demo.html',
+      controller: 'demoCtrl'
     })
     .state('register', {
       url: '/',
-      templateUrl: './views/register.html'
+      templateUrl: './views/register.html',
+      controller: 'registerCtrl'
     })
     .state('login', {
       url: '/',

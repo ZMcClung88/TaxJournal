@@ -1,0 +1,12 @@
+.main_login_wrapper {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid red;
+  }
+}

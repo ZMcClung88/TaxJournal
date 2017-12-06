@@ -31,11 +31,19 @@ var db = massive.connect({connectionString : connString},
 const port = 8080;    //80
 
 // app.set('db', massiveInstance);
-const mainCtrl = require('./backend/mainCtrl');
+const mainControl = require('./backend/mainControl');
+const registerControl = require('./backend/registerControl');
 
-// PRODUCTS
-app.get('/api/entries', mainCtrl.getEntries);
-// app.get('/api/crew', mainCtrl.getCrew);
+// ENTRIES
+app.get('/api/entries', mainControl.getEntries);
+
+// USERS
+app.get('/api/users', mainControl.getUsers);
+
+// REGISTER
+app.post('/api/users', registerControl.register = () => {
+
+});
 
 
 //TEST////////////////////
