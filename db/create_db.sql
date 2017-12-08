@@ -44,7 +44,7 @@ INSERT INTO entries(user_id, who, location, why, breakfast, lunch, dinner, home,
   '1',
   'Guy Larson',
   'Classy Country Club',
-  'Brunch to discuss new opprotunity',
+  'Brunch to discuss new opportunity',
   45.00,
   null,
   null,
@@ -55,6 +55,23 @@ INSERT INTO entries(user_id, who, location, why, breakfast, lunch, dinner, home,
   null,
   null,
   55.00
+);
+
+INSERT INTO entries(user_id, who, location, why, breakfast, lunch, dinner, home, golf, cocktails, other, total1, total2, total3) VALUES(
+  '1',
+  'Bob Zalenski',
+  'Bobby\'s car wash',
+  'washed car fleet',
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  250.00,
+  null,
+  null,
+  250.00
 );
 
 
