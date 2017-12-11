@@ -1,6 +1,7 @@
 body {
   .home_wrapper {
     width: 100%;
+    font-family: sans-serif;
 
 
     .header {
@@ -13,6 +14,8 @@ body {
       background-color: lightgrey;
       padding-left: 20px;
       padding-right: 20px;
+      position: fixed;
+      font-family: sans-serif;
 
 
       a {
@@ -32,7 +35,11 @@ body {
       }
 
       .header_right {
-        padding-right: 40px;
+        padding-right: 50px;
+
+        a {
+          margin-left: 15px;
+        }
       }
     }
 
@@ -42,6 +49,7 @@ body {
       .home_hero {
         width: 100vw;
         height: 70vh;
+        padding-top: 10vh;
         background: url('/img/images/carlos-muza-84523.jpg') no-repeat center fixed;
       }
 

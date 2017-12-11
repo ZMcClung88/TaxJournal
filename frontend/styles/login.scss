@@ -1,13 +1,85 @@
 .main_login_wrapper {
   // background-color: yellow;
-  height: 70vh;
+  height: 100vh;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+  background: url('/img/images/cathryn-lavery-67852.jpg') no-repeat center fixed;
 
-  form {
+  .login_header {
+    width: 99%;
+    height: 10%;
     display: flex;
-    flex-direction: column;
-    // border: 1px solid red;
+    // flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgrey;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: fixed;
+    font-family: sans-serif;
+
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .login_header_left {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 40px;
+        width: 40px;
+        padding-right: 15px;
+      }
+    }
+
+    .login_header_right {
+      padding-right: 50px;
+
+      a {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .form_section {
+    width: 100%;
+    height: 100%;
+    // border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 11%;
+
+    .form_fields {
+      height: 50%;
+      width: 50%;
+      border: 1px solid black;
+      background-color: lightgrey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      line-height: 30px;
+      border-radius: 5px;
+
+      h1 {
+        width: 33%;
+      }
+
+      input {
+        width: 33%;
+      }
+
+      button {
+        width: 15%;
+        margin-top: 20px;
+      }
+    }
   }
 }

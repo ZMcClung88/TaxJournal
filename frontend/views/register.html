@@ -1,23 +1,30 @@
-<h1>REGISTER</h1>
-<ul>
-  <li ui-sref="home">Home</li>
-  <li ui-sref="demo">Demo</li>
-  <li ui-sref="register">Register</li>
-  <li ui-sref="login">Login</li>
-  <li ui-sref="user">User</li>
-</ul>
+
 
 <div class="register_main_wrapper">
-  <form class="" action="index.html" method="post">
-    <input type="text" name="" value="" placeholder="First Name">
-    <input type="text" name="" value="" placeholder="Last Name">
-    <input type="text" name="" value="" placeholder="Email">
-    <input type="text" name="" value="" placeholder="Password">
-    <input type="text" name="" value="" placeholder="Confirm Password">
-    <div class="newsletter_radio">
-      <label for="radio_newsletter">Newsletter</label>
-      <input type="radio" id="radio_newsletter" name="" value="" title="Newsletter" checked>
+  <div class="register_header">
+    <div class="register_header_left">
+      <img ui-sref="home" src="/img/images/Generic Book File Type-595b40b75ba036ed117d95f4.svg" alt="">
+      <a ui-sref="demo">DEMO</a>
     </div>
-    <button type="button" name="button">Submit</button>
-  </form>
+    <div class="register_header_right">
+      <a ui-sref="login">LOGIN</a>
+      <a ui-sref="register">SIGN UP</a>
+    </div>
+  </div>
+
+  <section class="register_form_section">
+    <form action="index.html" method="post">
+      <input type="text" name="" value="" placeholder="First Name">
+      <input type="text" name="" value="" placeholder="Last Name">
+      <input type="text" name="" value="" placeholder="Email">
+      <input type="text" name="" value="" placeholder="Password">
+      <input type="text" name="" value="" placeholder="Confirm Password">
+      <div class="newsletter_radio">
+        <label for="radio_newsletter">Newsletter</label>
+        <input type="radio" id="radio_newsletter" name="" value="" title="Newsletter" checked>
+      </div>
+      <button type="button" name="button">Submit</button>
+    </form>
+  </section>
+
 </div>

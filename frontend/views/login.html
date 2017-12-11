@@ -1,16 +1,24 @@
-<h1>LOGIN</h1>
-<ul>
-  <li ui-sref="home">Home</li>
-  <li ui-sref="demo">Demo</li>
-  <li ui-sref="register">Register</li>
-  <li ui-sref="login">Login</li>
-  <li ui-sref="user">User</li>
-</ul>
 
 <div class="main_login_wrapper">
-  <form class="" action="index.html" method="post">
-    <input type="text" name="" value="" placeholder="Email">
-    <input type="text" name="" value="" placeholder="Password">
-    <button type="button" name="button">Login</button>
-  </form>
+  <div class="login_header">
+    <div class="login_header_left">
+      <img ui-sref="home" src="/img/images/Generic Book File Type-595b40b75ba036ed117d95f4.svg" alt="">
+      <a ui-sref="demo">DEMO</a>
+    </div>
+    <div class="login_header_right">
+      <a ui-sref="login">LOGIN</a>
+      <a ui-sref="register">SIGN UP</a>
+    </div>
+  </div>
+
+  <section class="form_section">
+    <form class="form_fields" action="index.html" method="post">
+      <!-- <h1>Username:</h1> -->
+      <input type="text" name="" value="" placeholder="Username">
+      <!-- <h1>Password:</h1> -->
+      <input type="text" name="" value="" placeholder="Password">
+      <button type="button" name="button">Login</button>
+    </form>
+  </section>
+
 </div>
