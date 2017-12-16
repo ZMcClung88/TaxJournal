@@ -9,6 +9,7 @@ var connString = 'postgres://postgres:@localhost/TaxDiary';
 // const app = module.exports = express();
 var app = module.exports = express();
 
+
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/dist'));
 app.use(cors());
@@ -41,9 +42,18 @@ app.get('/api/entries', mainControl.getEntries);
 app.get('/api/users', mainControl.getUsers);
 
 // REGISTER
-app.post('/api/users', registerControl.register = () => {
-
+app.post('/api/register', register = (req, res) => {
+  let user = req.body.user;
+  let db = app.get('db');
+  db.register([user.first_name, user.last_name, user.email, user.password, user.newsletter], (err, user) => {
+    if(!err) {
+      res.send(user);
+    } else {
+      res.send(err);
+    }
+  })
 });
+// app.post('/api/register', registerControl.register);
 
 
 //TEST////////////////////

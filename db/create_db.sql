@@ -83,34 +83,30 @@ CREATE TABLE users (
   first_name varchar(25),
   last_name varchar(25),
   email varchar(75),
-  username varchar(50),
-  passphrase varchar(50),
+  password varchar(50),
   newsletter boolean
 )
 
-INSERT INTO users (first_name, last_name, email, username, passphrase, newsletter) VALUES (
+INSERT INTO users (first_name, last_name, email, password, newsletter) VALUES (
   'Zac',
   'McClung',
   'z@z.com',
-  'zlee15',
   'passphrase',
   true
 )
 
-INSERT INTO users (first_name, last_name, email, username, passphrase, newsletter) VALUES (
+INSERT INTO users (first_name, last_name, email, password, newsletter) VALUES (
   'Courtney',
   'McClung',
   'c@c.com',
-  'cmcclung09',
   'mayble0829',
   true
 )
 
-INSERT INTO users (first_name, last_name, email, username, passphrase, newsletter) VALUES (
+INSERT INTO users (first_name, last_name, email, password, newsletter) VALUES (
   'Mayble',
   'McClung',
   'm@m.com',
-  'maybleisthecutest',
   'password',
   true
 )

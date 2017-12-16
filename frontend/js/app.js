@@ -9,21 +9,21 @@ angular.module('myApp', ['ui.router']).config(function($stateProvider, $urlRoute
       controller: 'mainCtrl'
     })
     .state('demo', {
-      url: '/',
+      url: '/demo',
       templateUrl: './views/demo.html',
       controller: 'demoCtrl'
     })
     .state('register', {
-      url: '/',
+      url: '/register',
       templateUrl: './views/register.html',
       controller: 'registerCtrl'
     })
     .state('login', {
-      url: '/',
+      url: '/login',
       templateUrl: './views/login.html'
     })
     .state('user', {
-      url: '/',
+      url: '/user/:id',
       templateUrl: './views/user.html'
     })
 })

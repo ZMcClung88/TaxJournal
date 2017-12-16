@@ -1,40 +1,86 @@
-.demo_wrapper {
-  border: 1px solid green;
+.demo_header {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: fixed;
+  font-family: sans-serif;
+  background-color: lightgrey;
 
-  .demo_header {
-    width: 100%;
-    height: 10%;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .header_left {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    padding-left: 20px;
-    padding-right: 20px;
-    position: fixed;
-    font-family: sans-serif;
-    background-color: lightgrey;
+
+    img {
+      height: 40px;
+      width: 40px;
+      padding-right: 15px;
+    }
+  }
+
+  .header_right {
+    padding-right: 50px;
 
     a {
-      text-decoration: none;
-      color: black;
+      margin-left: 15px;
     }
+  }
+}
 
-    .header_left {
+.demo_wrapper {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .demo_content {
+    border: 1px solid blue;
+    width: 75vw;
+    height: 65vh;
+    display: flex;
+    // flex-direction: row;
+
+    .demo_display {
+      width: 100%;
+      height: 100%;
       display: flex;
-      align-items: center;
+      flex-direction: row;
 
-      img {
-        height: 40px;
-        width: 40px;
-        padding-right: 15px;
+      .panel {
+        height: 100%;
+        width: 25%;
+        border: 2px solid pink;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
       }
-    }
 
-    .header_right {
-      padding-right: 50px;
+      .display {
+        height: 100%;
+        width: 75%;
+        border: 2px solid purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-      a {
-        margin-left: 15px;
+        #add {
+          display: none;
+        }
+
+        #graph {
+          display: none;
+        }
       }
     }
   }

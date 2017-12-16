@@ -14,11 +14,11 @@
 
   <section class="register_form_section">
     <form action="index.html" method="post">
-      <input type="text" name="" value="" placeholder="First Name">
-      <input type="text" name="" value="" placeholder="Last Name">
-      <input type="text" name="" value="" placeholder="Email">
-      <input type="text" name="" value="" placeholder="Password">
-      <input type="text" name="" value="" placeholder="Confirm Password">
+      <input ng-model="user.first_name" type="text" name="" value="" placeholder="First Name">
+      <input ng-model="user.last_name" type="text" name="" value="" placeholder="Last Name">
+      <input ng-model="user.email" type="text" name="" value="" placeholder="Email">
+      <input ng-model="user.password" type="text" name="" value="" placeholder="Password">
+      <input ng-model="user.password_confirm" type="text" name="" value="" placeholder="Confirm Password">
       <div class="newsletter_radio">
         <label for="radio_newsletter">Newsletter</label>
         <input type="radio" id="radio_newsletter" name="" value="" title="Newsletter" checked>
