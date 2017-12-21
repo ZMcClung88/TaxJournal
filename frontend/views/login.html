@@ -12,12 +12,12 @@
   </div>
 
   <section class="form_section">
-    <form class="form_fields" action="index.html" method="post">
+    <form ng-submit="login(user)" class="form_fields" method="post">
       <!-- <h1>Username:</h1> -->
-      <input type="text" name="" value="" placeholder="Username">
+      <input ng-model="user.email" type="email" name="" value="" placeholder="Username">
       <!-- <h1>Password:</h1> -->
-      <input type="text" name="" value="" placeholder="Password">
-      <button type="button" name="button">Login</button>
+      <input ng-model="user.password" type="password" name="" value="" placeholder="Password">
+      <button type="submit" name="button">Login</button>
     </form>
   </section>
 

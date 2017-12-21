@@ -20,7 +20,8 @@ angular.module('myApp', ['ui.router']).config(function($stateProvider, $urlRoute
     })
     .state('login', {
       url: '/login',
-      templateUrl: './views/login.html'
+      templateUrl: './views/login.html',
+      controller: 'loginCtrl'
     })
     .state('user', {
       url: '/user/:id',

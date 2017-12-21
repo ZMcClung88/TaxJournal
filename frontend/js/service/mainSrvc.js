@@ -8,13 +8,24 @@ angular.module('myApp').service('mainSrvc', function($http) {
   }
 
   this.register = (user) => {
-
     // console.log(user)
-
     return $http({
       method: 'POST',
       url: '/api/register',
       data: user
     }).then(response => response)
   };
+
+  this.login = (email, password) => {
+    console.log('service', email, password);
+    return $http({
+      method: 'POST',
+      url: '/api/login',
+      data: {
+        email,
+        password
+      }
+    }).then(response => response.data);
+  };
+
 })
