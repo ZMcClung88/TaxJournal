@@ -13,15 +13,15 @@
   </div>
 
   <section class="register_form_section">
-    <form action="/api/register" method="post">
+    <form ng-submit="register(user)" method="post">
       <input ng-model="user.first_name" type="text" name="firstName" value="" placeholder="First Name">
       <input ng-model="user.last_name" type="text" name="lastName" value="" placeholder="Last Name">
       <input ng-model="user.email" type="text" name="email" value="" placeholder="Email">
       <input ng-model="user.password" type="text" name="password" value="" placeholder="Password">
-      <input ng-model="user.password_confirm" type="text" name="passwordConfirm" value="" placeholder="Confirm Password">
+      <!-- <input ng-model="user.password_confirm" type="text" name="passwordConfirm" value="" placeholder="Confirm Password"> -->
       <div class="newsletter_radio">
         <label for="radio_newsletter">Newsletter</label>
-        <input type="radio" id="radio_newsletter" name="newsletter" value="" title="Newsletter" checked>
+        <input ng-init="user.newsletter=true" ng-model="user.newsletter" ng-true-value="true" ng-false-value="false" type="checkbox" id="radio_newsletter" name="newsletter" value="" title="Newsletter" checked>
       </div>
       <button type="submit" name="button">Submit</button>
     </form>

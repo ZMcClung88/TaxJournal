@@ -93,7 +93,7 @@ INSERT INTO users (first_name, last_name, email, password, newsletter) VALUES (
   'z@z.com',
   'passphrase',
   true
-)
+);
 
 INSERT INTO users (first_name, last_name, email, password, newsletter) VALUES (
   'Courtney',
@@ -101,7 +101,7 @@ INSERT INTO users (first_name, last_name, email, password, newsletter) VALUES (
   'c@c.com',
   'mayble0829',
   true
-)
+);
 
 INSERT INTO users (first_name, last_name, email, password, newsletter) VALUES (
   'Mayble',
@@ -109,4 +109,4 @@ INSERT INTO users (first_name, last_name, email, password, newsletter) VALUES (
   'm@m.com',
   'password',
   true
-)
+);

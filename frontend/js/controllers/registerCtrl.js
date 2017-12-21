@@ -1,14 +1,11 @@
-angular.module('myApp').controller('registerCtrl', function($scope) {
+angular.module('myApp').controller('registerCtrl', function($scope, mainSrvc) {
 
   $scope.register = (user) => {
     let flag = true
-
+    console.log(user)
     if (flag) {
       mainSrvc.register(user).then(function(response) {
-        user.first_name = '';
-        user.last_name = '';
-        user.email = '';
-        user.password = ''
+
       })
     }
 
