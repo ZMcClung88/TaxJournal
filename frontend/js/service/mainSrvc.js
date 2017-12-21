@@ -8,6 +8,9 @@ angular.module('myApp').service('mainSrvc', function($http) {
   }
 
   this.register = (user) => {
+
+    console.log(user)
+    
     return $http({
       method: 'POST',
       url: '/api/register',

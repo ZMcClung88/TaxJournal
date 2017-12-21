@@ -35,28 +35,17 @@ const port = 8080;    //80
 const mainControl = require('./backend/mainControl');
 const registerControl = require('./backend/registerControl');
 
-// ENTRIES
+//// ENTRIES ////
 app.get('/api/entries', mainControl.getEntries);
 
-// USERS
+//// USERS ////
 app.get('/api/users', mainControl.getUsers);
 
-// REGISTER
-app.post('/api/register', register = (req, res) => {
-  let user = req.body.user;
-  let db = app.get('db');
-  db.register([user.first_name, user.last_name, user.email, user.password, user.newsletter], (err, user) => {
-    if(!err) {
-      res.send(user);
-    } else {
-      res.send(err);
-    }
-  })
-});
-// app.post('/api/register', registerControl.register);
+//// REGISTER ////
+app.post('/api/register', registerControl.register);
 
 
-//TEST////////////////////
+//// TEST ////
 app.get('/test', function(req, res) {
   res.status(200).json('test working');
 })

@@ -1,4 +1,5 @@
 angular.module('myApp').controller('registerCtrl', function($scope) {
+
   $scope.register = (user) => {
     let flag = true
 
