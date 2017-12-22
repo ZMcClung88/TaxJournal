@@ -5,7 +5,19 @@ angular.module('myApp').service('mainSrvc', function($http) {
       method: 'GET',
       url: '/api/entries'
     }).then(response => response.data)
-  }
+  };
+
+  this.addEntry = (entry) => {
+    console.log(entry)
+    return $http({
+      method: 'POST',
+      url: '/api/demo',
+      data: {entry}
+    }).then(response => {
+      // console.log(response.data.entry)
+      return response.data.entry;
+    })
+  };
 
   this.register = (user) => {
     // console.log(user)

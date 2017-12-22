@@ -36,19 +36,36 @@
 
       <div class="display">
         <div class="add_form" id="add">
-          <div class="">
-            <p>add +</p>
+          <div class="entry-card">
+            <form class="" ng-submit="addEntry(entry)" method="post">
+              <input ng-model="entry.user_id" type="number" name="" value="" placeholder="user_id">
+              <input ng-model="entry.who" type="text" name="" value="" placeholder="Who">
+              <input ng-model="entry.location" type="text" name="" value="" placeholder="Location">
+              <input ng-model="entry.why" type="text" name="" value="" placeholder="Why">
+              <input ng-model="entry.breakfast" type="text" name="" value="" placeholder="Breakfast">
+              <input ng-model="entry.lunch" type="text" name="" value="" placeholder="Lunch">
+              <input ng-model="entry.dinner" type="text" name="" value="" placeholder="Dinner">
+              <input ng-model="entry.home" type="text" name="" value="" placeholder="Home">
+              <input ng-model="entry.golf" type="text" name="" value="" placeholder="Golf">
+              <input ng-model="entry.cocktails" type="text" name="" value="" placeholder="Cocktails">
+              <input ng-model="entry.other" type="text" name="" value="" placeholder="other">
+              <input ng-model="entry.total1" type="text" name="" value="" placeholder="total1">
+              <input ng-model="entry.total2" type="text" name="" value="" placeholder="total2">
+              <input ng-model="entry.total3" type="number" name="" value="" placeholder="total3">
+              <button type="submit" name="button">Submit</button>
+            </form>
           </div>
         </div>
         <div class="all" id="all">
-          <div class="">
+          <!-- <div class=""> -->
             <div class="entry" ng-repeat="entry in entries">
-              {{entry.id}}
-              {{entry.who}}
-              {{entry.why}}
-              {{entry.total3}}
+              <p>{{entry.id}}</p>
+              <!-- <p>{{entry.who}}</p> -->
+              <p>{{entry.location}}</p>
+              <!-- <p>{{entry.why}}</p> -->
+              <p>${{entry.total3}}<p>
             </div>
-          </div>
+          <!-- </div> -->
         </div>
         <div class="graph" id="graph">
             <div class="">

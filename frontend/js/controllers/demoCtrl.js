@@ -8,8 +8,16 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
   };
   $scope.getAllEntries();
 
+  $scope.addEntry = (entry) => {
+    // console.log(entry)
+    mainSrvc.addEntry(entry).then(response => {
+
+    })
+  }
+
   $('#add-btn').on('click', function() {
     $('#add').show();
+    $('#add').css('display', 'flex');
     $('#all').hide();
     $('#graph').hide();
   }),

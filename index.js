@@ -48,6 +48,7 @@ const usersControl = require('./backend/usersControl')
 
 //// ENTRIES ////
 app.get('/api/entries', mainControl.getEntries);
+app.post('/api/demo', mainControl.addEntry);
 
 //// USERS ////
 app.get('/api/users', mainControl.getUsers);
