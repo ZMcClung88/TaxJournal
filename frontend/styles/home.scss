@@ -51,6 +51,20 @@ body {
         height: 70vh;
         padding-top: 10vh;
         background: url('/img/images/carlos-muza-84523.jpg') no-repeat center fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        letter-spacing: 3px;
+
+
+        p {
+          font-size: 18px;
+        }
+
+        h1 {
+          font-size: 64px;
+        }
       }
 
       .content_row {
