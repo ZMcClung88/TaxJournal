@@ -59,11 +59,16 @@
         <div class="all" id="all">
           <!-- <div class=""> -->
             <div class="entry" ng-repeat="entry in entries">
-              <p>{{entry.id}}</p>
-              <!-- <p>{{entry.who}}</p> -->
+              <!-- <p>{{entry.id}}</p>
+
               <p>{{entry.location}}</p>
-              <!-- <p>{{entry.why}}</p> -->
-              <p>${{entry.total3}}<p>
+
+              <p>${{entry.total3}}<p> -->
+              <ul class="entry_list">
+                <li>{{entry.id}}</li>
+                <li>{{entry.location}}</li>
+                <li>{{entry.total3}}</li>
+              </ul>
             </div>
           <!-- </div> -->
         </div>
