@@ -89,6 +89,11 @@
             border-radius: 10px;
             width: 90%;
             height: 40%;
+            padding-left: 12.5%;
+
+            input {
+              height: 22px;
+            }
           }
         }
 
@@ -104,8 +109,10 @@
           .entry {
             border: 1px dashed blue;
             width: 70%;
+            height: 55px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             line-height: 30px;
           }
         }

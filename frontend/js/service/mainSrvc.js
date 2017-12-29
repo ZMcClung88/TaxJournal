@@ -29,7 +29,6 @@ angular.module('myApp').service('mainSrvc', function($http) {
   };
 
   this.login = (email, password) => {
-    console.log('service', email, password);
     return $http({
       method: 'POST',
       url: '/api/login',
