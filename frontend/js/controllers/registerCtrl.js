@@ -5,10 +5,10 @@ angular.module('myApp').controller('registerCtrl', function($scope, mainSrvc) {
     // console.log(user)
     if (flag) {
       mainSrvc.register(user).then(function(response) {
-          // swal({
-          //   title: "Success",
-          //   icon: "danger"
-          // });
+          swal({
+            title: "Success",
+            icon: "success"
+          });
       })
     }
 
