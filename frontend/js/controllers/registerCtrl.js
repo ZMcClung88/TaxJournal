@@ -4,7 +4,7 @@ angular.module('myApp').controller('registerCtrl', function($scope, mainSrvc) {
     let flag = true
     // console.log(user)
     if (flag) {
-      mainSrvc.register(user).then(function(response) {
+      mainSrvc.register(user).then(response => {
           swal({
             title: "Success",
             icon: "success"

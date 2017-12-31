@@ -3,7 +3,7 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
   $scope.getAllEntries = () => {
     mainSrvc.getAllEntries().then(response => {
       $scope.entries = response;
-      console.log($scope.entries);
+      // console.log($scope.entries);
     })
   };
   $scope.getAllEntries();
@@ -11,7 +11,10 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
   $scope.addEntry = (entry) => {
     // console.log(entry)
     mainSrvc.addEntry(entry).then(response => {
-
+      swal({
+        title: "Success",
+        icon: "success"
+      });
     })
   }
 
@@ -31,4 +34,5 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
     $('#all').hide();
     $('#graph').show();
   })
+
 })

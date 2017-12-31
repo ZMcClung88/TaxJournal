@@ -47,6 +47,7 @@
 
   .demo_content {
     border: 1px solid blue;
+    border-radius: 10px;
     width: 75vw;
     height: 65vh;
     margin-top: 5%;
@@ -67,6 +68,23 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        .panel_buttons {
+          // border: 2px solid limegreen;
+          height: 50%;
+          width: 55%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          li {
+            border: 1px solid red;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
       }
 
       .display {
@@ -132,6 +150,21 @@
 
         #graph {
           display: none;
+
+          .chart {
+            border: 2px solid green;
+            height: 400px;
+            width: 500px;
+
+            .chart div {
+              font: 10px sans-serif;
+              background-color: steelblue;
+              text-align: right;
+              padding: 3px;
+              margin: 1px;
+              color: white;
+            }
+          }
         }
       }
     }
