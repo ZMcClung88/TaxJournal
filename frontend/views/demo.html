@@ -30,15 +30,15 @@
         <ul class="panel_buttons">
           <li id="add-btn">Add</li>
           <li id="all-btn">All</li>
-          <li id="graph-btn">Graph</li>
+          <li id="graph-btn">Stats</li>
         </ul>
       </div>
 
       <div class="display">
         <div class="add_form" id="add">
           <div class="entry-card">
-            <form class="" ng-submit="addEntry(entry)" method="post">
-              <input ng-model="entry.user_id" type="number" name="" value="" placeholder="user_id">
+            <form class="" name="entry_form" ng-submit="addEntry(entry)" method="post">
+              <input ng-model="entry.date" type="text" name="" value="" placeholder="Date">
               <input ng-model="entry.who" type="text" name="" value="" placeholder="Who">
               <input ng-model="entry.location" type="text" name="" value="" placeholder="Location">
               <input ng-model="entry.why" type="text" name="" value="" placeholder="Why">
@@ -52,7 +52,7 @@
               <input ng-model="entry.total1" type="text" name="" value="" placeholder="total1">
               <input ng-model="entry.total2" type="text" name="" value="" placeholder="total2">
               <input ng-model="entry.total3" type="number" name="" value="" placeholder="total3">
-              <button type="submit" name="button">Submit</button>
+              <button  type="submit" name="button">Submit</button>
             </form>
           </div>
         </div>

@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS entries;
 
 CREATE TABLE entries (
   id serial primary key,
-  user_id int,
+  date varchar(100),
   who varchar(150),
   location varchar(150),
   why varchar(150),
@@ -20,8 +20,8 @@ CREATE TABLE entries (
 );
 
 
-INSERT INTO entries(user_id, who, location, why, breakfast, lunch, dinner, home, golf, cocktails, other, total1, total2, total3) VALUES(
-  '1',
+INSERT INTO entries(date, who, location, why, breakfast, lunch, dinner, home, golf, cocktails, other, total1, total2, total3) VALUES(
+  '1/1/2018',
   'J & S Rock',
   'Palm and Kennedy Center',
   'Johnson referral at dinner followed by theater.',
@@ -40,8 +40,8 @@ INSERT INTO entries(user_id, who, location, why, breakfast, lunch, dinner, home,
   381.00
 );
 
-INSERT INTO entries(user_id, who, location, why, breakfast, lunch, dinner, home, golf, cocktails, other, total1, total2, total3) VALUES(
-  '1',
+INSERT INTO entries(date, who, location, why, breakfast, lunch, dinner, home, golf, cocktails, other, total1, total2, total3) VALUES(
+  'January 2, 2018',
   'Guy Larson',
   'Classy Country Club',
   'Brunch to discuss new opportunity',
@@ -57,10 +57,10 @@ INSERT INTO entries(user_id, who, location, why, breakfast, lunch, dinner, home,
   55.00
 );
 
-INSERT INTO entries(user_id, who, location, why, breakfast, lunch, dinner, home, golf, cocktails, other, total1, total2, total3) VALUES(
-  '1',
+INSERT INTO entries(date, who, location, why, breakfast, lunch, dinner, home, golf, cocktails, other, total1, total2, total3) VALUES(
+  '01/01/18',
   'Bob Zalenski',
-  'Bobby\'s car wash',
+  'Bobbys car wash',
   'washed car fleet',
   null,
   null,
