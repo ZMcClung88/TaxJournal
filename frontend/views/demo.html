@@ -67,14 +67,17 @@
               <ul class="entry_list">
                 <li>{{entry.id}}</li>
                 <li>{{entry.location}}</li>
-                <li>{{entry.total3}}</li>
+                <li>${{entry.total3}}</li>
               </ul>
             </div>
           <!-- </div> -->
         </div>
         <div class="graph" id="graph">
             <div class="chart">
-
+              <ul>
+                <li>Total Entries: {{ entries.length }}</li>
+                <li>Total Expenses: ${{ total }}</li>
+              </ul>
             </div>
             <div bar-chartbar-height="20"bar-padding="5"></div>
         </div>

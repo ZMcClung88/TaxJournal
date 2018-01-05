@@ -171,6 +171,9 @@
             border: 2px solid green;
             height: 400px;
             width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             .chart div {
               font: 10px sans-serif;

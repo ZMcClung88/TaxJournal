@@ -3,7 +3,9 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
   $scope.getAllEntries = () => {
     mainSrvc.getAllEntries().then(response => {
       $scope.entries = response;
-      // console.log($scope.entries);
+      // console.log($scope.entries.length);
+      $scope.total = response.map(entry => entry.total3).reduce((acc, cur) => acc += cur);
+      console.log($scope.total)
     })
   };
   $scope.getAllEntries();
@@ -25,7 +27,7 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
       $scope.entry.total1 = '';
       $scope.entry.total2 = '';
       $scope.entry.total3 = '';
-      
+
       swal({
         title: "Success",
         text: "Entry Added!",
