@@ -1,2 +1,2 @@
-INSERT INTO entries (date, who, location, why, breakfast, lunch, dinner, home, golf, cocktails, other, total1, total2, total3)
+INSERT INTO entries (date, time,  who, location, why, breakfast, lunch, dinner, golf, cocktails, office_supplies, beg_miles, end_miles, other)
 VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)

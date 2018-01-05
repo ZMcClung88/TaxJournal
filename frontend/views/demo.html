@@ -39,19 +39,19 @@
           <div class="entry-card">
             <form class="" name="entry_form" ng-submit="addEntry(entry)" method="post">
               <input ng-model="entry.date" type="text" name="" value="" placeholder="Date">
+              <input ng-model="entry.time" type="text" name="" value="" placeholder="Time">
               <input ng-model="entry.who" type="text" name="" value="" placeholder="Who">
               <input ng-model="entry.location" type="text" name="" value="" placeholder="Location">
               <input ng-model="entry.why" type="text" name="" value="" placeholder="Why">
               <input ng-model="entry.breakfast" type="text" name="" value="" placeholder="Breakfast">
               <input ng-model="entry.lunch" type="text" name="" value="" placeholder="Lunch">
               <input ng-model="entry.dinner" type="text" name="" value="" placeholder="Dinner">
-              <input ng-model="entry.home" type="text" name="" value="" placeholder="Home">
               <input ng-model="entry.golf" type="text" name="" value="" placeholder="Golf">
               <input ng-model="entry.cocktails" type="text" name="" value="" placeholder="Cocktails">
-              <input ng-model="entry.other" type="text" name="" value="" placeholder="other">
-              <input ng-model="entry.total1" type="text" name="" value="" placeholder="total1">
-              <input ng-model="entry.total2" type="text" name="" value="" placeholder="total2">
-              <input ng-model="entry.total3" type="number" name="" value="" placeholder="total3">
+              <input ng-model="entry.office_supplies" type="text" name="" value="" placeholder="office_supplies">
+              <input ng-model="entry.beg_miles" type="text" name="" value="" placeholder="Beginning Mileage">
+              <input ng-model="entry.end_miles" type="text" name="" value="" placeholder="End Mileage">
+              <input ng-model="entry.other" type="text" name="" value="" placeholder="Other">
               <button  type="submit" name="button">Submit</button>
             </form>
           </div>
@@ -65,9 +65,9 @@
 
               <p>${{entry.total3}}<p> -->
               <ul class="entry_list">
-                <li>{{entry.id}}</li>
+                <li>{{entry.date}}</li>
+                <li>{{entry.time}}</li>
                 <li>{{entry.location}}</li>
-                <li>${{entry.total3}}</li>
               </ul>
             </div>
           <!-- </div> -->
@@ -77,6 +77,8 @@
               <ul>
                 <li>Total Entries: {{ entries.length }}</li>
                 <li>Total Expenses: ${{ total }}</li>
+                <li>Total Meals: ${{ totalMeals }}</li>
+                <li>Total Miles: {{ totalMiles }}</li>
               </ul>
             </div>
             <div bar-chartbar-height="20"bar-padding="5"></div>

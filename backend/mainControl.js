@@ -16,7 +16,7 @@ const app = require('.././index.js')
       let entry = req.body.entry
       let db = app.get('db');
       // console.log(req.body.entry);
-      db.addEntry([entry.date, entry.who, entry.location, entry.why, entry.breakfast, entry.lunch, entry.dinner, entry.home, entry.golf, entry.cocktails, entry.other, entry.total1, entry.total2, entry.total3], (err) => {
+      db.addEntry([entry.date, entry.time, entry.who, entry.location, entry.why, entry.breakfast, entry.lunch, entry.dinner, entry.golf, entry.cocktails, entry.office_supplies, entry.beg_miles, entry.end_miles, entry.other], (err) => {
         if(!err) {
           // console.log(entry);
           res.status(200).send(entry);

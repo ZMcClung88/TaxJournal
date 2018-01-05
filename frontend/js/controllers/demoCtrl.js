@@ -3,30 +3,40 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
   $scope.getAllEntries = () => {
     mainSrvc.getAllEntries().then(response => {
       $scope.entries = response;
-      // console.log($scope.entries.length);
-      $scope.total = response.map(entry => entry.total3).reduce((acc, cur) => acc += cur);
-      console.log($scope.total)
+      
+      $scope.total = response.map(entry => {
+        return entry.breakfast + entry.lunch + entry.dinner + entry.golf + entry.cocktails + entry.office_supplies + entry.other
+      }).reduce((acc, cur) => acc += cur);
+
+      $scope.totalMiles = response.map(entry => {
+        return entry.end_miles - entry.beg_miles;
+      }).reduce((acc, cur) => acc += cur);
+
+      $scope.totalMeals = response.map(entry => {
+        return entry.breakfast + entry.lunch + entry.dinner + entry.cocktails;
+      }).reduce((acc, cur) => acc += cur);
+
     })
   };
   $scope.getAllEntries();
 
   $scope.addEntry = (entry) => {
-    // console.log(entry)
+    // console.log('working here', entry)
     mainSrvc.addEntry(entry).then(response => {
       $scope.entry.date = '';
+      $scope.entry.time = '';
       $scope.entry.who = '';
       $scope.entry.location = '';
       $scope.entry.why = '';
       $scope.entry.breakfast = '';
       $scope.entry.lunch = '';
       $scope.entry.dinner = '';
-      $scope.entry.home = '';
       $scope.entry.golf = '';
       $scope.entry.cocktails = '';
+      $scope.entry.office_supplies = '';
+      $scope.entry.beg_miles = '';
+      $scope.entry.end_miles = '';
       $scope.entry.other = '';
-      $scope.entry.total1 = '';
-      $scope.entry.total2 = '';
-      $scope.entry.total3 = '';
 
       swal({
         title: "Success",
@@ -36,23 +46,6 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
     })
   }
 
-  // $scope.resetForm = () => {
-  //   console.log("reset function working")
-  //   $scope.entry.date = '';
-  //   $scope.entry.who = '';
-  //   $scope.entry.location = '';
-  //   $scope.entry.why = '';
-  //   $scope.entry.breakfast = '';
-  //   $scope.entry.lunch = '';
-  //   $scope.entry.dinner = '';
-  //   $scope.entry.home = '';
-  //   $scope.entry.golf = '';
-  //   $scope.entry.cocktails = '';
-  //   $scope.entry.other = '';
-  //   $scope.entry.total1 = '';
-  //   $scope.entry.total2 = '';
-  //   $scope.entry.total3 = '';
-  // }
 
   $('#add-btn').on('click', function() {
     $('#add').show();

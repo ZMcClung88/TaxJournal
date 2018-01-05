@@ -8,13 +8,11 @@ angular.module('myApp').service('mainSrvc', function($http) {
   };
 
   this.addEntry = (entry) => {
-    // console.log(entry)
     return $http({
       method: 'POST',
       url: '/api/demo',
       data: {entry}
     }).then(response => {
-      // console.log(response.data.entry)
       return response.data.entry;
     })
   };

@@ -4,74 +4,71 @@ DROP TABLE IF EXISTS entries;
 CREATE TABLE entries (
   id serial primary key,
   date varchar(100),
+  time varchar(100),
   who varchar(150),
   location varchar(150),
   why varchar(150),
   breakfast int,
   lunch int,
   dinner int,
-  home int,
   golf int,
   cocktails int,
-  other varchar(250),
-  total1 int,
-  total2 int,
-  total3 int
+  office_supplies int,
+  beg_miles int,
+  end_miles int,
+  other int
 );
 
 
-INSERT INTO entries(date, who, location, why, breakfast, lunch, dinner, home, golf, cocktails, other, total1, total2, total3) VALUES(
+INSERT INTO entries(date, time, who, location, why, breakfast, lunch, dinner, golf, cocktails, office_supplies, beg_miles, end_miles, other) VALUES(
   '1/1/2018',
+  '1pm-4pm',
   'J & S Rock',
-  'Palm and Kennedy Center',
-  'Johnson referral at dinner followed by theater.',
+  'Maverick Center',
+  'Johnson referral at dinner',
   null,
   null,
   235.00,
   null,
   null,
   15.00,
-  '[
-    "theater": "120.00",
-    "park": "11.00"
-  ]',
-  null,
-  null,
-  381.00
+  2044,
+  2082,
+  null
 );
 
-INSERT INTO entries(date, who, location, why, breakfast, lunch, dinner, home, golf, cocktails, other, total1, total2, total3) VALUES(
-  'January 2, 2018',
-  'Guy Larson',
-  'Classy Country Club',
-  'Brunch to discuss new opportunity',
-  45.00,
+INSERT INTO entries(date, time, who, location, why, breakfast, lunch, dinner, golf, cocktails, office_supplies, beg_miles, end_miles, other) VALUES(
+  '1/2/2018',
+  '9am-11am',
+  'Bob Marley',
+  'Palm and Kennedy Country Club',
+  'Brunch with clients',
+  125.00,
   null,
   null,
   null,
   null,
-  10.00,
   null,
-  null,
-  null,
-  55.00
+  2088,
+  2099,
+  null
 );
 
-INSERT INTO entries(date, who, location, why, breakfast, lunch, dinner, home, golf, cocktails, other, total1, total2, total3) VALUES(
-  '01/01/18',
-  'Bob Zalenski',
-  'Bobbys car wash',
-  'washed car fleet',
+INSERT INTO entries(date, time, who, location, why, breakfast, lunch, dinner, golf, cocktails, office_supplies, beg_miles, end_miles, other) VALUES(
+  '1/1/2018',
+  '6pm-8pm',
+  'Tina Fey',
+  'Vivint Smart Home Arena',
+  'Client gift for business',
   null,
   null,
   null,
   null,
   null,
   null,
-  250.00,
   null,
   null,
-  250.00
+  80.00
 );
 
 
