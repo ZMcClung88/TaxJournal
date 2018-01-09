@@ -2,6 +2,7 @@ const express = require('express')
     , bodyParser = require('body-parser')
     , massive = require('massive')
     , cors = require('cors')
+    , parseurl = require('parseurl')
     , session = require('express-session')
     , config = require('./backend/config');
 
@@ -13,6 +14,34 @@ var app = module.exports = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/dist'));
 app.use(cors());
+
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+}))
+
+app.use(function (req, res, next) {
+  if (!req.session.views) {
+    req.session.views = {}
+  }
+
+  // get the url pathname
+  var pathname = parseurl(req).pathname
+
+  // count the views
+  req.session.views[pathname] = (req.session.views[pathname] || 0) + 1
+
+  next()
+})
+
+app.get('/home', function (req, res, next) {
+  res.send('you viewed this page ' + req.session.views['/home'] + ' times')
+})
+
+app.get('/demo', function (req, res, next) {
+  res.send('you viewed this page ' + req.session.views['/demo'] + ' times')
+})
 
 // app.use(session({
 //   cookieName: "session",

@@ -7,7 +7,7 @@ module.exports = {
     let userInfo = [user.email, user.password];
     let db = app.get('db');
     // console.log(user, userInfo)
-    db.login(userInfo, (err) => {
+    db.login((userInfo), (err) => {
       if (!err) {
         // req.session.user = user;
         res.status(200).send(user);

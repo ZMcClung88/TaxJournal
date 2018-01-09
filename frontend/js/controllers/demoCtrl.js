@@ -3,7 +3,7 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
   $scope.getAllEntries = () => {
     mainSrvc.getAllEntries().then(response => {
       $scope.entries = response;
-      
+
       $scope.total = response.map(entry => {
         return entry.breakfast + entry.lunch + entry.dinner + entry.golf + entry.cocktails + entry.office_supplies + entry.other
       }).reduce((acc, cur) => acc += cur);
@@ -16,6 +16,8 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
         return entry.breakfast + entry.lunch + entry.dinner + entry.cocktails;
       }).reduce((acc, cur) => acc += cur);
 
+      $scope.date = response.map(entry => entry.date);
+      console.log($scope.date)
     })
   };
   $scope.getAllEntries();
