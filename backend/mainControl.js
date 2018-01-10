@@ -37,7 +37,7 @@ const app = require('.././index.js')
    // });
     getSingleDemo: (req, res) => {
       let item = req.params.id;
-      db.getSingleDemo([item], (err, item) => {
+      db.getSingleDemo(item, (err, item) => {
         if(!err) {
           console.log(item)
         } else {

@@ -11,7 +11,7 @@ body {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      background-color: lightgrey;
+      // background-color: lightgrey;
       padding-left: 20px;
       padding-right: 20px;
       position: fixed;
@@ -41,6 +41,10 @@ body {
           margin-left: 15px;
         }
       }
+    }
+
+    .header.active {
+      background-color: white;
     }
 
     .home_content {
