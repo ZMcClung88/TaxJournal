@@ -13,6 +13,11 @@ angular.module('myApp', ['ui.router']).config(function($stateProvider, $urlRoute
       templateUrl: './views/demo.html',
       controller: 'demoCtrl'
     })
+    .state('singleDemo', {
+      url: '/demo/:id',
+      templateUrl: './views/singleDemo.html',
+      controller: 'singleDemoCtrl'
+    })
     .state('register', {
       url: '/register',
       templateUrl: './views/register.html',

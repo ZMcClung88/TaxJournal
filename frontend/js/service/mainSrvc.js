@@ -17,6 +17,20 @@ angular.module('myApp').service('mainSrvc', function($http) {
     })
   };
 
+  // this.getSingleProduct = (param) => {
+  // return $http({
+  //   method: 'GET',
+  //   url: '/api/product/' + param + '/'
+  // }).then(response => response.data)
+  this.getSingleDemo = param => {
+    return $http({
+      method: 'GET',
+      url: '/api/singleDemo/' + param + '/'
+    }).then(response => {
+      console.log('here here here me me me')
+    })
+  }
+
   this.register = (user) => {
     // console.log(user)
     return $http({

@@ -26,6 +26,25 @@ const app = require('.././index.js')
         }
       })
     },
+   //  getSingleProduct: (req, res) => {
+   // let search = req.params.id;
+   // db.get_single_product([search], (err, product) => {
+   //   if (!err) {
+   //     res.status(200).send(product);
+   //   } else {
+   //     res.send(err);
+   //   }
+   // });
+    getSingleDemo: (req, res) => {
+      let item = req.params.id;
+      db.getSingleDemo([item], (err, item) => {
+        if(!err) {
+          console.log(item)
+        } else {
+          console.log(err)
+        }
+      })
+    },
     getUsers: (req, res) => {
       let db = app.get('db');
       db.getAllUsers((err, users) => {
