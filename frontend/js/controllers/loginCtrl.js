@@ -9,17 +9,17 @@ angular.module('myApp').controller('loginCtrl', function($rootScope, $location, 
       // $scope.currentUser = response;
       // console.log($scope.currentUser)
       if(response.length === 0) {
-        console.log(response);
+        // console.log(response);
         swal({
           title: "Login Failed",
           text: "please try again",
           icon: "warning"
         })
       } else {
-        $rootScope.loggedUser = response;
+        $rootScope.loggedUser = response[0];
         $location.path('account');
         // $rootScope.refreshHeader();
-        console.log($scope.currentUser);
+        // console.log($scope.currentUser);
       }
       $scope.user.email = '';
       $scope.user.password = '';
