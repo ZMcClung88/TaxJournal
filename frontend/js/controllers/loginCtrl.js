@@ -6,8 +6,19 @@ angular.module('myApp').controller('loginCtrl', function($scope, mainSrvc) {
     // console.log(userEmail, userPassword)
 
     mainSrvc.login(userEmail, userPassword).then(function(response) {
-      $scope.currentUser = response;
+      // $scope.currentUser = response;
       // console.log($scope.currentUser)
+      if(response.length === 0) {
+        console.log(response);
+        swal({
+          title: "Login Failed",
+          text: "please try again",
+          icon: "warning"
+        })
+      } else {
+        $scope.currentUser = response;
+        console.log($scope.currentUser);
+      }
       $scope.user.email = '';
       $scope.user.password = '';
     })

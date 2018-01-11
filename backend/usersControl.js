@@ -3,18 +3,19 @@ const app = require('.././index.js')
 
 module.exports = {
   login: (req, res) => {
-    console.log("******");
-    console.log(req.session);
+    // console.log("******");
+    // console.log(req.session);
     let user = req.body;
     let userInfo = [user.email, user.password];
     let db = app.get('db');
     db.login((userInfo), (err, dbRecords) => {
-
       if (!err) {
-
-
-        // req.session.user = user;
-        res.status(200).send(user);
+        if(dbRecords.length == 0) {
+          res.status(204).send("0")
+        } else if(dbRecords.length > 0) {
+          req.session.user = user;
+          res.status(200).send(user);
+        }
       } else {
         console.log(err);
         res.send(err)

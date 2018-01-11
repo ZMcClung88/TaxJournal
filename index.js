@@ -18,7 +18,9 @@ app.use(cors());
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  duration: 30 * 60 * 1000,
+  activeDuration: 5 * 60 * 1000
 }))
 
 app.use(function (req, res, next) {
