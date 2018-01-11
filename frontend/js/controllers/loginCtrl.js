@@ -1,4 +1,4 @@
-angular.module('myApp').controller('loginCtrl', function($scope, mainSrvc) {
+angular.module('myApp').controller('loginCtrl', function($rootScope, $location, $scope, mainSrvc) {
 
   $scope.login = (user) => {
     let userEmail = user.email;
@@ -16,7 +16,9 @@ angular.module('myApp').controller('loginCtrl', function($scope, mainSrvc) {
           icon: "warning"
         })
       } else {
-        $scope.currentUser = response;
+        $rootScope.loggedUser = response;
+        $location.path('account');
+        // $rootScope.refreshHeader();
         console.log($scope.currentUser);
       }
       $scope.user.email = '';

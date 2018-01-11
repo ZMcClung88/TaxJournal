@@ -14,7 +14,8 @@ module.exports = {
           res.status(204).send("0")
         } else if(dbRecords.length > 0) {
           req.session.user = user;
-          res.status(200).send(user);
+          res.status(200).send(dbRecords);
+          console.log(dbRecords);
         }
       } else {
         console.log(err);
