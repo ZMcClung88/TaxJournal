@@ -8,6 +8,7 @@ angular.module('myApp').controller('loginCtrl', function($rootScope, $location, 
     mainSrvc.login(userEmail, userPassword).then(function(response) {
       // $scope.currentUser = response;
       // console.log($scope.currentUser)
+
       if(response.length === 0) {
         // console.log(response);
         swal({

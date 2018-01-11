@@ -24,6 +24,7 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
 
   $scope.addEntry = (entry) => {
     // console.log('working here', entry)
+
     mainSrvc.addEntry(entry).then(response => {
       $scope.entry.date = '';
       $scope.entry.time = '';

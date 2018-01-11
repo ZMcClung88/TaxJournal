@@ -37,11 +37,12 @@ const app = require('.././index.js')
    // });
     getSingleDemo: (req, res) => {
       let item = req.params.id;
+      let db = app.get('db');
       db.getSingleDemo(item, (err, item) => {
         if(!err) {
-          console.log(item)
+          res.status(200).send(item)
         } else {
-          console.log(err)
+          return err;
         }
       })
     },

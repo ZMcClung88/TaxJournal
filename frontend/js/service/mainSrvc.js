@@ -26,9 +26,7 @@ angular.module('myApp').service('mainSrvc', function($http) {
     return $http({
       method: 'GET',
       url: '/api/singleDemo/' + param + '/'
-    }).then(response => {
-      console.log('here here here me me me')
-    })
+    }).then(response => response.data[0])
   }
 
   this.register = (user) => {
