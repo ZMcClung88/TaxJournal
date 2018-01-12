@@ -181,3 +181,20 @@ INSERT INTO user_entries(user_id, date, time, who, location, why, breakfast, lun
   2099,
   null
 );
+INSERT INTO user_entries(user_id, date, time, who, location, why, breakfast, lunch, dinner, golf, cocktails, office_supplies, beg_miles, end_miles, other) VALUES(
+  2,
+  '1/8/2018',
+  '6am-11am',
+  'Mr Al Harrington',
+  'Palm and Kennedy Country Club',
+  'Brunch with client to discuss alberta proposal',
+  75.00,
+  null,
+  null,
+  null,
+  null,
+  null,
+  2905,
+  2999,
+  55
+);

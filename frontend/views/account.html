@@ -1,6 +1,13 @@
 <h1>ACCOUNT PAGE MFers</h1>
 <ul>
-  <li>{{ user.first_name }}</li>
+  <li>Welcome, {{ user.first_name }}</li>
   <li>{{ user.last_name }}</li>
   <li>{{ user.email }}</li>
 </ul>
+
+<div class="" ng-repeat="e in entries">
+  <h1>{{ e.date }}</h1>
+  <h1>{{ e.time }}</h1>
+  <h1>{{ e.who }}</h1>
+  <h1>{{ e.location }}</h1>
+</div>

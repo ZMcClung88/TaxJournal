@@ -15,7 +15,7 @@ module.exports = {
         } else if(dbRecords.length > 0) {
           req.session.user = user;
           res.status(200).send(dbRecords);
-          console.log(dbRecords);
+          // console.log(dbRecords);
         }
       } else {
         console.log(err);
@@ -23,6 +23,22 @@ module.exports = {
       }
     });
   },
+
+  getUserEntries: (req, res) => {
+    let id = req.body.user_id;
+    let db = app.get('db');
+    console.log(id);
+
+    db.getUserEntries((id), (err, entries) => {
+      if(!err) {
+        console.log(entries)
+        res.send(entries);
+      } else {
+        console.log(err);
+        res.send(err);
+      }
+    })
+  }
 
   // checkLoginStatus: (req, res) => {
   //   console.log('in function');

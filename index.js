@@ -87,6 +87,7 @@ app.get('/api/singleDemo/:id', mainControl.getSingleDemo);
 app.get('/api/users', mainControl.getUsers);
 app.post('/api/register', registerControl.register);
 app.post('/api/login', usersControl.login);
+app.post('/api/account', usersControl.getUserEntries);
 
 
 //// TEST ////

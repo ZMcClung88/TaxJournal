@@ -15,7 +15,7 @@
     // flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    // background-color: lightgrey;
+    background-color: lightgrey;
     padding-left: 20px;
     padding-right: 20px;
     position: fixed;
@@ -25,11 +25,6 @@
     a {
       text-decoration: none;
       color: black;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      color: white;
     }
 
     .login_header_left {

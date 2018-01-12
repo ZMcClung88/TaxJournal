@@ -49,4 +49,13 @@ angular.module('myApp').service('mainSrvc', function($http) {
     }).then(response => response.data);
   };
 
+  this.getUserEntries = (user) => {
+    console.log("user", user);
+    return $http({
+      method: "POST",
+      url: '/api/account',
+      data: user
+    }).then(response => response.data)
+  }
+
 })
