@@ -1,4 +1,4 @@
-<h1>ACCOUNT PAGE MFers</h1>
+<!-- <h1>ACCOUNT PAGE MFers</h1>
 <ul>
   <li>Welcome, {{ user.first_name }}</li>
   <li>{{ user.last_name }}</li>
@@ -10,4 +10,81 @@
   <h1>{{ e.time }}</h1>
   <h1>{{ e.who }}</h1>
   <h1>{{ e.location }}</h1>
+</div> -->
+<div class="demo_header">
+  <div class="header_left">
+    <img ui-sref="home" src="/img/images/Generic Book File Type-595b40b75ba036ed117d95f4.svg" alt="">
+    <a ui-sref="demo">DEMO</a>
+  </div>
+  <div class="header_right">
+    <a ui-sref="login">LOGIN</a>
+    <a ui-sref="register">SIGN UP</a>
+  </div>
+</div>
+
+<div class="demo_wrapper">
+  <div class="demo_content">
+    <div class="demo_display">
+      <div class="panel">
+        <ul class="panel_buttons">
+          <li id="add-btn">Add</li>
+          <li id="all-btn">All</li>
+          <li id="graph-btn">Stats</li>
+        </ul>
+      </div>
+
+      <div class="display">
+        <div class="add_form" id="add">
+          <div class="entry-card">
+            <form class="" name="entry_form" ng-submit="addEntry(entry)" method="post">
+              <input ng-model="entry.date" type="date" name="" value="2018-01-01" placeholder="Date">
+              <input ng-model="entry.time" type="text" name="" value="" placeholder="Time">
+              <input ng-model="entry.who" type="text" name="" value="" placeholder="Who">
+              <input ng-model="entry.location" type="text" name="" value="" placeholder="Location">
+              <input ng-model="entry.why" type="text" name="" value="" placeholder="Why">
+              <input ng-model="entry.breakfast" type="text" name="" value="" placeholder="Breakfast">
+              <input ng-model="entry.lunch" type="text" name="" value="" placeholder="Lunch">
+              <input ng-model="entry.dinner" type="text" name="" value="" placeholder="Dinner">
+              <input ng-model="entry.golf" type="text" name="" value="" placeholder="Golf">
+              <input ng-model="entry.cocktails" type="text" name="" value="" placeholder="Cocktails">
+              <input ng-model="entry.office_supplies" type="text" name="" value="" placeholder="office_supplies">
+              <input ng-model="entry.beg_miles" type="text" name="" value="" placeholder="Beginning Mileage">
+              <input ng-model="entry.end_miles" type="text" name="" value="" placeholder="End Mileage">
+              <input ng-model="entry.other" type="text" name="" value="" placeholder="Other">
+              <button  type="submit" name="button">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="all" id="all">
+          <!-- <div class=""> -->
+            <div class="entry" ng-repeat="entry in entries" ui-sref="singleDemo({ id: entry.id })">
+              <!-- <p>{{entry.id}}</p> -->
+
+              <!-- <p>{{entry.location}}</p>
+
+              <p>${{entry.total3}}<p> -->
+              <ul class="entry_list">
+                <li>{{entry.date}}</li>
+                <li>{{entry.time}}</li>
+                <li>{{entry.location}}</li>
+              </ul>
+            </div>
+          <!-- </div> -->
+        </div>
+        <div class="graph" id="graph">
+            <div class="chart">
+              <ul>
+                <li>Total Entries: {{ entries.length }}</li>
+                <li>Total Expenses: ${{ total }}</li>
+                <li>Total Meals: ${{ totalMeals }}</li>
+                <li>Total Miles: {{ totalMiles }}</li>
+              </ul>
+            </div>
+            <div bar-chartbar-height="20"bar-padding="5"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>

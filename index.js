@@ -16,11 +16,13 @@ app.use(express.static(__dirname + '/dist'));
 app.use(cors());
 
 app.use(session({
+  cookieName: "session",
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
   duration: 30 * 60 * 1000,
-  activeDuration: 5 * 60 * 1000
+  activeDuration: 5 * 60 * 1000,
+  cookie: { maxAge:600000 }
 }))
 
 app.use(function (req, res, next) {
@@ -88,6 +90,7 @@ app.get('/api/users', mainControl.getUsers);
 app.post('/api/register', registerControl.register);
 app.post('/api/login', usersControl.login);
 app.post('/api/account', usersControl.getUserEntries);
+
 
 
 //// TEST ////

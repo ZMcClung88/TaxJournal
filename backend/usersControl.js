@@ -28,6 +28,7 @@ module.exports = {
     let id = req.body.user_id;
     let db = app.get('db');
     console.log(id);
+    console.log(req)
 
     db.getUserEntries((id), (err, entries) => {
       if(!err) {
