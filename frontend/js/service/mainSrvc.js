@@ -1,4 +1,6 @@
-angular.module('myApp').service('mainSrvc', function($http) {
+angular.module('myApp').service('mainSrvc', function($http, $rootScope) {
+
+  let userId = $rootScope.loggedUser.user_id;
 
   this.getAllEntries = () => {
     return $http({
@@ -50,12 +52,25 @@ angular.module('myApp').service('mainSrvc', function($http) {
   };
 
   this.getUserEntries = (user) => {
-    console.log("user", user);
+    // console.log("user", user);
     return $http({
       method: "POST",
       url: '/api/account',
       data: user
     }).then(response => response.data)
-  }
+  };
+
+  this.userAddEntry = (entry, userId) => {
+    console.log("mainSrvc", userId);
+    return $http({
+      method: 'POST',
+      url: '/api/account/addEntry',
+      data: entry
+    }).then(response => {
+      // console.log("mainSrvc", entry)
+      return response.data.entry;
+    })
+  };
+
 
 })

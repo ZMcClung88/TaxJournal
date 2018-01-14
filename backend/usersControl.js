@@ -27,19 +27,37 @@ module.exports = {
   getUserEntries: (req, res) => {
     let id = req.body.user_id;
     let db = app.get('db');
-    console.log(id);
-    console.log(req)
+    // console.log(id);
+    // console.log(req)
 
     db.getUserEntries((id), (err, entries) => {
       if(!err) {
-        console.log(entries)
+        // console.log(entries)
         res.send(entries);
       } else {
         console.log(err);
         res.send(err);
       }
     })
-  }
+  },
+
+  userAddEntry: (req, res) => {
+    let entry = req.body
+    let id = req.body.user_id;
+    let db = app.get('db');
+    // console.log("user_id", id);
+    // console.log("here in the backend!!!");
+    console.log("usercontrol id", id);
+    db.userAddEntry([id, entry.date, entry.time, entry.who, entry.location, entry.why, entry.breakfast, entry.lunch, entry.dinner, entry.golf, entry.cocktails, entry.office_supplies, entry.beg_miles, entry.end_miles, entry.other], (err) => {
+      if(!err) {
+        // console.log("whoooopiiii");
+        res.status(200).send(entry);
+      } else {
+        console.log(err);
+        return err;
+      }
+    })
+  },
 
   // checkLoginStatus: (req, res) => {
   //   console.log('in function');
