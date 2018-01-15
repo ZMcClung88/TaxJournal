@@ -33,20 +33,20 @@ angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, m
     // console.log(id);
 
     mainSrvc.userAddEntry(entry, id).then(response => {
-      // $scope.entry.date = '';
-      // $scope.entry.time = '';
-      // $scope.entry.who = '';
-      // $scope.entry.location = '';
-      // $scope.entry.why = '';
-      // $scope.entry.breakfast = '';
-      // $scope.entry.lunch = '';
-      // $scope.entry.dinner = '';
-      // $scope.entry.golf = '';
-      // $scope.entry.cocktails = '';
-      // $scope.entry.office_supplies = '';
-      // $scope.entry.beg_miles = '';
-      // $scope.entry.end_miles = '';
-      // $scope.entry.other = '';
+      $scope.entry.date = '';
+      $scope.entry.time = '';
+      $scope.entry.who = '';
+      $scope.entry.location = '';
+      $scope.entry.why = '';
+      $scope.entry.breakfast = '';
+      $scope.entry.lunch = '';
+      $scope.entry.dinner = '';
+      $scope.entry.golf = '';
+      $scope.entry.cocktails = '';
+      $scope.entry.office_supplies = '';
+      $scope.entry.beg_miles = '';
+      $scope.entry.end_miles = '';
+      $scope.entry.other = '';
 
       swal({
         title: "Success",
