@@ -27,13 +27,13 @@ module.exports = {
   getUserEntries: (req, res) => {
     let id = req.body.user_id;
     let db = app.get('db');
-    // console.log(id);
+    // console.log("usersControl", id);
     // console.log(req)
 
     db.getUserEntries((id), (err, entries) => {
       if(!err) {
         // console.log(entries)
-        res.send(entries);
+        res.status(200).send(entries);
       } else {
         console.log(err);
         res.send(err);
@@ -42,15 +42,15 @@ module.exports = {
   },
 
   userAddEntry: (req, res) => {
-    let entry = req.body
-    let id = req.body.user_id;
+    let entry = req.body.entry
+    let id = req.body.id;
     let db = app.get('db');
-    // console.log("user_id", id);
-    // console.log("here in the backend!!!");
-    console.log("usercontrol id", id);
+
+    console.log("usersControl", id)
+
     db.userAddEntry([id, entry.date, entry.time, entry.who, entry.location, entry.why, entry.breakfast, entry.lunch, entry.dinner, entry.golf, entry.cocktails, entry.office_supplies, entry.beg_miles, entry.end_miles, entry.other], (err) => {
       if(!err) {
-        // console.log("whoooopiiii");
+        console.log(entry);
         res.status(200).send(entry);
       } else {
         console.log(err);

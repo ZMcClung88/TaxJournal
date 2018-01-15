@@ -1,7 +1,5 @@
 angular.module('myApp').service('mainSrvc', function($http, $rootScope) {
 
-  let userId = $rootScope.loggedUser.user_id;
-
   this.getAllEntries = () => {
     return $http({
       method: 'GET',
@@ -60,15 +58,18 @@ angular.module('myApp').service('mainSrvc', function($http, $rootScope) {
     }).then(response => response.data)
   };
 
-  this.userAddEntry = (entry, userId) => {
-    console.log("mainSrvc", userId);
+  this.userAddEntry = (entry, id) => {
+    // console.log("mainSrvc", id)
     return $http({
       method: 'POST',
       url: '/api/account/addEntry',
-      data: entry
+      data: {
+        entry,
+        id
+      }
     }).then(response => {
-      // console.log("mainSrvc", entry)
-      return response.data.entry;
+      // console.log(response)
+      return response.data;
     })
   };
 

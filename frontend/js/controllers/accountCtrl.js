@@ -28,11 +28,11 @@ angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, m
   }
   $scope.getUserEntries();
 
-  $scope.userAddEntry = (entry, userId) => {
-    // console.log('working here', entry)
-    console.log($scope.userId)
+  $scope.userAddEntry = (entry, id) => {
+    var id = $rootScope.loggedUser.user_id;
+    // console.log(id);
 
-    mainSrvc.userAddEntry(entry).then(response => {
+    mainSrvc.userAddEntry(entry, id).then(response => {
       // $scope.entry.date = '';
       // $scope.entry.time = '';
       // $scope.entry.who = '';
