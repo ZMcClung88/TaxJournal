@@ -30,7 +30,6 @@ angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, m
 
   $scope.userAddEntry = (entry, id) => {
     var id = $rootScope.loggedUser.user_id;
-    // console.log(id);
 
     mainSrvc.userAddEntry(entry, id).then(response => {
       $scope.entry.date = '';
