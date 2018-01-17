@@ -11,14 +11,6 @@
   <h1>{{ e.who }}</h1>
   <h1>{{ e.location }}</h1>
 </div> -->
-<script>
-   angular.module('dateInputExample', [])
-     .controller('DateController', ['$scope', function($scope) {
-       $scope.example = {
-         value: new Date(2013, 9, 22)
-       };
-     }]);
-</script>
 
 <div class="demo_header">
   <div class="header_left">
@@ -43,11 +35,12 @@
       </div>
 
       <div class="display">
+        <h1>Welcome, {{user.first_name}}!</h1>
         <div class="add_form" id="add">
           <div class="entry-card">
             <form class="" name="entry_form" ng-submit="userAddEntry(entry)" method="post">
-              <input ng-model="entry.date" type="date" data-date="" data-date-format="DD MMMM YYYY" value="2015-08-09">
-              <!-- <input ng-model="entry.date" type="date" name="" value="2018-01-01" placeholder="Date"> -->
+              <!-- <input ng-model="entry.date" type="text" id="datepicker"> -->
+              <input ng-model="entry.date" type="date" name="" value="2018-01-01" placeholder="Date">
               <input ng-model="entry.time" type="text" name="" value="" placeholder="Time">
               <input ng-model="entry.who" type="text" name="" value="" placeholder="Who">
               <input ng-model="entry.location" type="text" name="" value="" placeholder="Location">

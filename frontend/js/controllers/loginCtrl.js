@@ -6,24 +6,20 @@ angular.module('myApp').controller('loginCtrl', function($rootScope, $location, 
     // console.log(userEmail, userPassword)
 
     mainSrvc.login(userEmail, userPassword).then(function(response) {
-      // $scope.currentUser = response;
-      // console.log($scope.currentUser)
-
-      if(response.length === 0) {
-        // console.log(response);
+      if (response[0]) {
+        $rootScope.loggedUser = response[0];
+        $scope.email = '';
+        $scope.password = '';
+        $location.path('account');
+        // $rootScope.refreshHeader();
+      } else {
+        // $scope.noMatch = true;
         swal({
           title: "Login Failed",
           text: "please try again",
           icon: "warning"
         })
-      } else {
-        $rootScope.loggedUser = response[0];
-        $location.path('account');
-        // $rootScope.refreshHeader();
-        // console.log($scope.currentUser);
       }
-      $scope.user.email = '';
-      $scope.user.password = '';
     })
   }
 

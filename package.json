@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "angular-slick": "0.0.0",
+    "angularjs-datepicker": "^2.1.23",
     "babel-preset-es2015": "^6.24.0",
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
