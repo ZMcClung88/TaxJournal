@@ -25,19 +25,23 @@ app.use(session({
   cookie: { maxAge:600000 }
 }))
 
-app.use(function (req, res, next) {
-  if (!req.session.views) {
-    req.session.views = {}
-  }
+// app.use(function (req, res, next) {
+//   if (!req.session.views) {
+//     req.session.views = {}
+//   }
+//
+//   // get the url pathname
+//   var pathname = parseurl(req).pathname
+//
+//   // count the views
+//   req.session.views[pathname] = (req.session.views[pathname] || 0) + 1
+//
+//   next()
+// })
 
-  // get the url pathname
-  var pathname = parseurl(req).pathname
-
-  // count the views
-  req.session.views[pathname] = (req.session.views[pathname] || 0) + 1
-
-  next()
-})
+// app.use(function (req, res, next) {
+//   console.log("looking for storage", req.session);
+// })
 
 app.get('/home', function (req, res, next) {
   res.send('you viewed this page ' + req.session.views['/home'] + ' times')
@@ -89,8 +93,9 @@ app.get('/api/singleDemo/:id', mainControl.getSingleDemo);
 app.get('/api/users', mainControl.getUsers);
 app.post('/api/register', registerControl.register);
 app.post('/api/login', usersControl.login);
-// app.get("/api/loggedUser", usersControl.checkLoginStatus)
+app.get("/api/loggedUser", usersControl.checkLoginStatus)
 app.post('/api/account', usersControl.getUserEntries);
+app.get('/api/singleEntry/:id', usersControl.getSingleEntry);
 app.post('/api/account/addEntry', usersControl.userAddEntry);
 
 

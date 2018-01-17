@@ -3,8 +3,7 @@ const app = require('.././index.js')
 
 module.exports = {
   login: (req, res) => {
-    // console.log("******");
-    // console.log(req.session);
+
     let user = req.body;
     let userInfo = [user.email, user.password];
     let db = app.get('db');
@@ -25,6 +24,8 @@ module.exports = {
   },
 
   getUserEntries: (req, res) => {
+    console.log("******");
+    console.log(req.session.user);
     let id = req.body.user_id;
     let db = app.get('db');
     // console.log("usersControl", id);
@@ -37,6 +38,18 @@ module.exports = {
       } else {
         console.log(err);
         res.send(err);
+      }
+    })
+  },
+
+  getSingleEntry: (req, res) => {
+    let item = req.params.id;
+    let db = app.get('db');
+    db.getSingleEntry(item, (err, item) => {
+      if(!err) {
+        res.status(200).send(item)
+      } else {
+        return err;
       }
     })
   },

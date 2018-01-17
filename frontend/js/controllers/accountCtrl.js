@@ -1,14 +1,13 @@
 angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, mainSrvc, $location, $timeout) {
   $scope.user = $rootScope.loggedUser;
   $scope.userId = $rootScope.loggedUser.user_id;
-  console.log("looking for name", $scope.user);
 
 
   $scope.getUserEntries = () => {
     let user = $scope.user;
-    console.log(user);
+    // console.log(user);
     mainSrvc.getUserEntries(user).then(response => {
-      console.log("here i am", response);
+      // console.log("here i am", response);
       $scope.entries = response;
 
       $scope.total = response.map(entry => {

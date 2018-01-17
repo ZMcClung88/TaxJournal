@@ -58,6 +58,13 @@ angular.module('myApp').service('mainSrvc', function($http, $rootScope) {
     }).then(response => response.data)
   };
 
+  this.getSingleEntry = param => {
+    return $http({
+      method: 'GET',
+      url: '/api/singleEntry/' + param + '/'
+    }).then(response => response.data[0])
+  }
+
   this.userAddEntry = (entry, id) => {
     // console.log("mainSrvc", id)
     return $http({

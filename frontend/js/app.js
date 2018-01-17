@@ -37,4 +37,9 @@ angular.module('myApp', ['ui.router']).config(function($stateProvider, $urlRoute
       url: '/user/:id',
       templateUrl: './views/user.html'
     })
+    .state('singleEntry', {
+      url: '/userEntry/:id',
+      templateUrl: './views/singleEntry.html',
+      controller: 'singleEntryCtrl'
+    })
 })
