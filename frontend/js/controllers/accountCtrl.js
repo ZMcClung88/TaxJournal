@@ -1,14 +1,20 @@
 angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, mainSrvc, $location, $timeout) {
+
   $scope.user = $rootScope.loggedUser;
   $scope.userId = $rootScope.loggedUser.user_id;
+  sessionStorage.setItem("user", JSON.stringify($scope.user));
+  sessionStorage.getItem("user");
 
+  console.log("looking for storage", localStorage);
 
   $scope.getUserEntries = () => {
-    let user = $scope.user;
-    // console.log(user);
-    mainSrvc.getUserEntries(user).then(response => {
+    // let user = $rootScope.loggedUser;
+    // console.log("logged user", user);
+    mainSrvc.getUserEntries($rootScope.loggedUser).then(response => {
       // console.log("here i am", response);
       $scope.entries = response;
+      sessionStorage.setItem("entries", JSON.stringify($scope.entries));
+      // console.log("testing", sessionStorage.getItem("entries"));
 
       $scope.total = response.map(entry => {
         return entry.breakfast + entry.lunch + entry.dinner + entry.golf + entry.cocktails + entry.office_supplies + entry.other
@@ -23,13 +29,14 @@ angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, m
       }).reduce((acc, cur) => acc += cur);
 
       $scope.date = response.map(entry => entry.date);
-      console.log($scope.date)
+      // console.log($scope.date)
     });
   }
   $scope.getUserEntries();
 
   $scope.userAddEntry = (entry, id) => {
     var id = $rootScope.loggedUser.user_id;
+    // console.log("working on date format", entry.date)
 
     mainSrvc.userAddEntry(entry, id).then(response => {
       $scope.entry.date = '';

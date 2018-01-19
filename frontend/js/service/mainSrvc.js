@@ -49,6 +49,19 @@ angular.module('myApp').service('mainSrvc', function($http, $rootScope) {
     }).then(response => response.data);
   };
 
+  this.checkLoginStatus = () => {
+    return $http({
+      method: 'GET',
+      url: '/loggedUser'
+    }).then(response => {
+      if(response.status === 200){
+        return response.data;
+      } else {
+        return
+      }
+    })
+  };
+
   this.getUserEntries = (user) => {
     // console.log("user", user);
     return $http({

@@ -7,15 +7,19 @@ module.exports = {
     let user = req.body;
     let userInfo = [user.email, user.password];
     let db = app.get('db');
-    db.login((userInfo), (err, dbRecords) => {
+    db.login(userInfo, (err, user) => {
       if (!err) {
-        if(dbRecords.length == 0) {
-          res.status(204).send("0")
-        } else if(dbRecords.length > 0) {
-          req.session.user = user;
-          res.status(200).send(dbRecords);
-          // console.log(dbRecords);
-        }
+        // if(dbRecords.length == 0) {
+        //   res.status(204).send("0")
+        // } else if(dbRecords.length > 0) {
+        //   req.session.user = user;
+        //   res.status(200).send(user);
+        //   console.log("At usersControl", req.session.user);
+        // }
+        req.session.user = user;
+        // console.log("please work", user[0])
+        res.status(200).send(user);
+        // console.log("2nd attempt from the back", req.session.user[0]);
       } else {
         console.log(err);
         res.send(err)
@@ -24,8 +28,8 @@ module.exports = {
   },
 
   getUserEntries: (req, res) => {
-    console.log("******");
-    console.log(req.session.user);
+    // console.log("******");
+    // console.log(req.session.user);
     let id = req.body.user_id;
     let db = app.get('db');
     // console.log("usersControl", id);
@@ -74,10 +78,10 @@ module.exports = {
 
   checkLoginStatus: (req, res) => {
     console.log('in function');
-    if (req.session.user) {
+    if (req.session) {
       // delete req.session.user[0].password;
       // res.status(200).send(req.session.user[0]);
-      console.log("userControl", req.session.user);
+      console.log("userControl", req.session);
     } else {
       console.log("$$$!!!$$$ not working $$$!!!$$$")
       // res.status(201).send();

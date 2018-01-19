@@ -20,6 +20,7 @@ angular.module('myApp').controller('loginCtrl', function($rootScope, $location, 
           icon: "warning"
         })
       }
+      console.log($rootScope.loggedUser, "beer here!")
     })
   }
 

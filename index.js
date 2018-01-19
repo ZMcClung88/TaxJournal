@@ -21,8 +21,8 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   duration: 30 * 60 * 1000,
-  activeDuration: 5 * 60 * 1000,
-  cookie: { maxAge:600000 }
+  activeDuration: 5 * 60 * 1000
+  // cookie: { maxAge:600000 }
 }))
 
 // app.use(function (req, res, next) {

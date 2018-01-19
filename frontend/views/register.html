@@ -23,7 +23,7 @@
         <label for="radio_newsletter">Newsletter</label>
         <input ng-init="user.newsletter=true" ng-model="user.newsletter" ng-true-value="true" ng-false-value="false" type="checkbox" id="radio_newsletter" name="newsletter" value="" title="Newsletter" checked>
       </div>
-      <button type="submit" name="button">Submit</button>
+      <button type="submit" name="button" ui-sref="account({ id: })">Submit</button>
     </form>
   </section>
 
