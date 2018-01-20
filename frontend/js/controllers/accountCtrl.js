@@ -62,6 +62,15 @@ angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, m
     })
   }
 
+  if ($rootScope.loggedUser) {
+    console.log("!!!im working!!!")
+    $("#login").hide();
+    $("#register").hide()
+  } else {
+    console.log("!!!im not working!!!")
+    $("#account").hide();
+  }
+
   $('#add-btn').on('click', function() {
     $('#add').show();
     $('#add').css('display', 'flex');

@@ -1,4 +1,4 @@
-angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
+angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootScope) {
 
   $scope.getAllEntries = () => {
     mainSrvc.getAllEntries().then(response => {
@@ -49,6 +49,14 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc) {
     })
   }
 
+  if ($rootScope.loggedUser) {
+    console.log("!!!im working!!!")
+    $("#login").hide();
+    $("#register").hide()
+  } else {
+    console.log("!!!im not working!!!")
+    $("#account").hide();
+  }
 
   $('#add-btn').on('click', function() {
     $('#add').show();

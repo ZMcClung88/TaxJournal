@@ -1,8 +1,8 @@
-angular.module('myApp').controller('mainCtrl', function($scope, mainSrvc) {
+angular.module('myApp').controller('mainCtrl', function($scope, mainSrvc, $rootScope) {
   $scope.name = 'Zac';
 
   $(window).on("scroll", function() {
-    console.log("scrolling...")
+    // console.log("scrolling...")
     if($(window).scrollTop() > 150) {
       $(".header").addClass("active");
     } else {
@@ -16,5 +16,15 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainSrvc) {
     })
   };
   $scope.getAllEntries();
+
+  console.log('mainCtrl', $rootScope.loggedUser);
+  if ($rootScope.loggedUser) {
+    console.log("!!!im working!!!")
+    $("#login").hide();
+    $("#register").hide()
+  } else {
+    console.log("!!!im not working!!!")
+    $("#account").hide();
+  }
 
 })
