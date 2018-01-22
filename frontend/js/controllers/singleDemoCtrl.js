@@ -1,4 +1,4 @@
-angular.module("myApp").controller('singleDemoCtrl', function($scope, mainSrvc, $stateParams) {
+angular.module("myApp").controller('singleDemoCtrl', function($scope, mainSrvc, $stateParams, $rootScope) {
   $scope.getSingleDemo = () => {
     mainSrvc.getSingleDemo($stateParams.id).then(function(response) {
       $scope.singleDemo = response;
@@ -6,4 +6,13 @@ angular.module("myApp").controller('singleDemoCtrl', function($scope, mainSrvc, 
     });
   }
   $scope.getSingleDemo();
+
+  if ($rootScope.loggedUser) {
+    console.log("!!!im working!!!")
+    $("#login").hide();
+    $("#register").hide()
+  } else {
+    console.log("!!!im not working!!!")
+    $("#account").hide();
+  }
 })
