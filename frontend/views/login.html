@@ -14,9 +14,9 @@
   <section class="form_section">
     <form ng-submit="login(user)" class="form_fields" method="post">
       <!-- <h1>Username:</h1> -->
-      <input id="email" ng-model="user.email" type="email" name="" value="" placeholder="Email">
+      <input id="email" ng-model="user.email" type="email" name="" value="" placeholder="Email" required>
       <!-- <h1>Password:</h1> -->
-      <input id="password" ng-model="user.password" type="password" name="" value="" placeholder="Password">
+      <input id="password" ng-model="user.password" type="password" name="" value="" placeholder="Password" required>
       <button type="submit" name="button">Login</button>
       <h1>New User? &nbsp;<a ui-sref="register">Sign Up</a></h1>
     </form>
