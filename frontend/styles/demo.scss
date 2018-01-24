@@ -154,14 +154,14 @@
               justify-content: space-around;
               align-items: center;
               background-color: white;
-
-              ul:hover {
-                height: 100%;
-                width: 100%;
-                background-color: blue;
-                color: white;
-              }
             }
+          }
+          .entry ul:hover {
+            // height: 100%;
+            // width: 100%;
+            background-color: lightblue;
+            border: 2px solid blue;
+            // color: white;
           }
         }
 
