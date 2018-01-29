@@ -1,5 +1,6 @@
 angular.module('myApp').controller('mainCtrl', function($scope, mainSrvc, $rootScope) {
   $scope.name = 'Zac';
+  $scope.user = $rootScope.loggedUser;
 
   $(window).on("scroll", function() {
     // console.log("scrolling...")
@@ -25,6 +26,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainSrvc, $rootS
   } else {
     console.log("!!!im not working!!!")
     $("#account").hide();
+    $("#home_greeting").hide();
   }
 
 })

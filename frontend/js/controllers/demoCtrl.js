@@ -1,4 +1,5 @@
 angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootScope) {
+  $scope.user = $rootScope.loggedUser;
 
   $scope.getAllEntries = () => {
     mainSrvc.getAllEntries().then(response => {
@@ -52,10 +53,11 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
   if ($rootScope.loggedUser) {
     console.log("!!!im working!!!")
     $("#login").hide();
-    $("#register").hide()
-  } else {
+    $("#register").hide();
+  } else{
     console.log("!!!im not working!!!")
     $("#account").hide();
+    $("#home_greeting").hide();
   }
 
   $('#add-btn').on('click', function() {

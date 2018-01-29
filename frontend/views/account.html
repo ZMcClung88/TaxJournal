@@ -20,6 +20,7 @@
   <div class="header_right">
     <a id="login" ui-sref="login">LOGIN</a>
     <a id="register" ui-sref="register">SIGN UP</a>
+    <h1 id="home_greeting">Welcome, {{user.first_name}}!</h1>
     <a id="account" ui-sref="account">MY ACCOUNT</a>
   </div>
 </div>
@@ -36,7 +37,7 @@
       </div>
 
       <div class="display">
-        <h1>Welcome, {{user.first_name}}!</h1>
+        <h1>{{user.first_name}}' s Journal</h1>
         <div class="add_form" id="add">
           <div class="entry-card">
             <form class="" name="entry_form" ng-submit="userAddEntry(entry)" method="post">

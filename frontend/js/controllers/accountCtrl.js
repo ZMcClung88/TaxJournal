@@ -69,6 +69,7 @@ angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, m
   } else {
     console.log("!!!im not working!!!")
     $("#account").hide();
+    $("#home_greeting").hide();
   }
 
   $('#add-btn').on('click', function() {
