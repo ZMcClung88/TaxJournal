@@ -61,6 +61,17 @@ angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, m
     })
   }
 
+  $scope.logOut = () => {
+    console.log("logging out!")
+     mainSrvc.logOut().then(response => {});
+
+     $timeout(() => {
+       $location.path("login");
+      //  $scope.$apply();
+       $rootScope.$apply($rootScope.loggedUser = false);
+     }, 300);
+   };
+
   if ($rootScope.loggedUser) {
     // console.log("!!!im working!!!")
     $("#login").hide();

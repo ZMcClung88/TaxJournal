@@ -49,6 +49,15 @@ angular.module('myApp').service('mainSrvc', function($http, $rootScope) {
     }).then(response => response.data);
   };
 
+  this.logOut = () => {
+    return $http({
+      method: 'GET',
+      url: "/logout"
+    }).then(response => {
+
+    });
+  };
+
   this.checkLoginStatus = () => {
     return $http({
       method: 'GET',

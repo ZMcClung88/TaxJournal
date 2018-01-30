@@ -93,7 +93,10 @@ app.get('/api/singleDemo/:id', mainControl.getSingleDemo);
 app.get('/api/users', mainControl.getUsers);
 app.post('/api/register', registerControl.register);
 app.post('/api/login', usersControl.login);
-app.get("/loggedUser", usersControl.checkLoginStatus)
+app.get("/loggedUser", usersControl.checkLoginStatus);
+app.get('/logout', function(req, res) {
+  req.session.destroy();
+});
 app.post('/api/account', usersControl.getUserEntries);
 app.get('/api/singleEntry/:id', usersControl.getSingleEntry);
 app.post('/api/account/addEntry', usersControl.userAddEntry);
