@@ -22,7 +22,8 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainSrvc, $rootS
   if ($rootScope.loggedUser) {
     console.log("!!!im working!!!")
     $("#login").hide();
-    $("#register").hide()
+    $("#register").hide();
+    $("#signup").hide();
   } else {
     console.log("!!!im not working!!!")
     $("#account").hide();
