@@ -43,3 +43,9 @@ angular.module('myApp', ['ui.router']).config(function($stateProvider, $urlRoute
       controller: 'singleEntryCtrl'
     })
 })
+
+angular.module('myApp').run(function($rootScope, mainSrvc){
+  mainSrvc.checkLoginStatus().then(function(response){
+    $rootScope.loggedUser = response;
+  })
+})

@@ -6,8 +6,9 @@ angular.module('myApp').controller('loginCtrl', function($rootScope, $location, 
     // console.log(userEmail, userPassword)
 
     mainSrvc.login(userEmail, userPassword).then(function(response) {
-      if (response[0]) {
-        $rootScope.loggedUser = response[0];
+      if (response) {
+        console.log(response);
+        $rootScope.loggedUser = response;
         $scope.email = '';
         $scope.password = '';
         $location.path('account');

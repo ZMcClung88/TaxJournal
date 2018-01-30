@@ -1,11 +1,10 @@
 angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, mainSrvc, $location, $timeout) {
-
   $scope.user = $rootScope.loggedUser;
   $scope.userId = $rootScope.loggedUser.user_id;
-  sessionStorage.setItem("user", JSON.stringify($scope.user));
-  sessionStorage.getItem("user");
+  // sessionStorage.setItem("user", JSON.stringify($scope.user));
+  // sessionStorage.getItem("user");
 
-  console.log("looking for storage", localStorage);
+  // console.log("looking for storage", localStorage);
 
   $scope.getUserEntries = () => {
     // let user = $rootScope.loggedUser;
@@ -13,7 +12,7 @@ angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, m
     mainSrvc.getUserEntries($rootScope.loggedUser).then(response => {
       // console.log("here i am", response);
       $scope.entries = response;
-      sessionStorage.setItem("entries", JSON.stringify($scope.entries));
+      // sessionStorage.setItem("entries", JSON.stringify($scope.entries));
       // console.log("testing", sessionStorage.getItem("entries"));
 
       $scope.total = response.map(entry => {
@@ -63,11 +62,11 @@ angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, m
   }
 
   if ($rootScope.loggedUser) {
-    console.log("!!!im working!!!")
+    // console.log("!!!im working!!!")
     $("#login").hide();
     $("#register").hide()
   } else {
-    console.log("!!!im not working!!!")
+    // console.log("!!!im not working!!!")
     $("#account").hide();
     $("#home_greeting").hide();
   }

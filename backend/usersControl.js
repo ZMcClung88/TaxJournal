@@ -3,7 +3,7 @@ const app = require('.././index.js')
 
 module.exports = {
   login: (req, res) => {
-
+    console.log("Logging In User")
     let user = req.body;
     let userInfo = [user.email, user.password];
     let db = app.get('db');
@@ -16,9 +16,10 @@ module.exports = {
         //   res.status(200).send(user);
         //   console.log("At usersControl", req.session.user);
         // }
-        req.session.user = user;
+        req.session.user = user[0];
+
         // console.log("please work", user[0])
-        res.status(200).send(user);
+        res.status(200).send(user[0]);
         // console.log("2nd attempt from the back", req.session.user[0]);
       } else {
         console.log(err);
@@ -77,14 +78,14 @@ module.exports = {
   },
 
   checkLoginStatus: (req, res) => {
-    console.log('in function');
-    if (req.session) {
-      // delete req.session.user[0].password;
-      // res.status(200).send(req.session.user[0]);
-      console.log("userControl", req.session);
+    console.log('Checking Login Status Of User');
+    if (req.session.user) {
+      console.log("Request.session is set")
+      // delete req.session.user.password;
+      console.log("userControl", req.session.user);
+      res.status(200).send(req.session.user);
     } else {
-      console.log("$$$!!!$$$ not working $$$!!!$$$")
-      // res.status(201).send();
+      res.status(201).send();
     }
   }
 
