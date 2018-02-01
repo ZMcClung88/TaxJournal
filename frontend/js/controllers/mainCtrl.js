@@ -2,6 +2,13 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainSrvc, $rootS
   $scope.name = 'Zac';
   $scope.user = $rootScope.loggedUser;
 
+  $scope.getAllEntries = () => {
+    mainSrvc.getAllEntries().then(response => {
+      $scope.entries = response;
+    })
+  };
+  $scope.getAllEntries();
+
   $(window).on("scroll", function() {
     // console.log("scrolling...")
     if($(window).scrollTop() > 150) {
@@ -10,13 +17,6 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainSrvc, $rootS
       $(".header").removeClass("active");
     }
   })
-
-  $scope.getAllEntries = () => {
-    mainSrvc.getAllEntries().then(response => {
-      $scope.entries = response;
-    })
-  };
-  $scope.getAllEntries();
 
   console.log('mainCtrl', $rootScope.loggedUser);
   if ($rootScope.loggedUser) {

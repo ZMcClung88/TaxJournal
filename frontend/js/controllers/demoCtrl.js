@@ -17,8 +17,6 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
         return entry.breakfast + entry.lunch + entry.dinner + entry.cocktails;
       }).reduce((acc, cur) => acc += cur);
 
-      $scope.date = response.map(entry => entry.date)[5];
-      console.log($scope.date)
     })
   };
   $scope.getAllEntries();
