@@ -1,4 +1,7 @@
 angular.module("myApp").controller('singleEntryCtrl', function($scope, mainSrvc, $stateParams, $rootScope) {
+
+  $scope.user = $rootScope.loggedUser;
+
   $scope.getSingleEntry = () => {
     mainSrvc.getSingleEntry($stateParams.id).then(function(response) {
       $scope.singleEntry = response;

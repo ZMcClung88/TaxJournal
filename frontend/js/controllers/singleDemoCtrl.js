@@ -1,4 +1,7 @@
 angular.module("myApp").controller('singleDemoCtrl', function($scope, mainSrvc, $stateParams, $rootScope) {
+
+  $scope.user = $rootScope.loggedUser;
+
   $scope.getSingleDemo = () => {
     mainSrvc.getSingleDemo($stateParams.id).then(function(response) {
       $scope.singleDemo = response;
@@ -13,6 +16,7 @@ angular.module("myApp").controller('singleDemoCtrl', function($scope, mainSrvc, 
     $("#register").hide()
   } else {
     console.log("!!!im not working!!!")
+    $("#home_greeting").hide();
     $("#account").hide();
   }
 })
