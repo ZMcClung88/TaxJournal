@@ -1,4 +1,4 @@
-<div class="demo_header">
+<!-- <div class="demo_header">
   <div class="header_left">
     <img ui-sref="home" src="/img/images/Generic Book File Type-595b40b75ba036ed117d95f4.svg" alt="">
     <a ui-sref="demo">DEMO</a>
@@ -9,10 +9,10 @@
     <h1 id="home_greeting">Welcome, {{user.first_name}}!</h1>
     <a id="account" ui-sref="account">MY ACCOUNT</a>
   </div>
-</div>
+</div> -->
 
 <!--fix and style later/ remove breaks -->
-</br>
+<!-- </br>
 </br>
 </br>
 </br>
@@ -25,4 +25,33 @@
   <ul>
     <li>{{ s }}</li>
   </ul>
+</div> -->
+
+
+<div class="singleDemo_wrapper">
+  <div class="demo_header">
+    <div class="header_left">
+      <img ui-sref="home" src="/img/images/Generic Book File Type-595b40b75ba036ed117d95f4.svg" alt="">
+      <a ui-sref="demo">DEMO</a>
+    </div>
+    <div class="header_right">
+      <a id="login" ui-sref="login">LOGIN</a>
+      <a id="register" ui-sref="register">SIGN UP</a>
+      <h1 id="home_greeting">Welcome, {{user.first_name}}!</h1>
+      <a id="account" ui-sref="account">MY ACCOUNT</a>
+    </div>
+  </div>
+
+
+  <section class="entry_section">
+    </br>
+    </br>
+    </br>
+    </br>
+    <div class="entry" ng-repeat="s in singleDemo">
+      <ul>
+        <li>{{ s }}</li>
+      </ul>
+    </div>
+  </section>
 </div>
