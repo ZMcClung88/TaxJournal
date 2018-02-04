@@ -48,9 +48,28 @@
     </br>
     </br>
     </br>
-    <div class="entry" ng-repeat="s in singleDemo">
+    <!-- <div class="entry" ng-repeat="s in singleDemo">
       <ul>
         <li>{{ s }}</li>
+      </ul>
+    </div> -->
+
+    <div class="entry">
+      <ul>
+        <li><p>Date: {{singleDemo.date}}</p></li>
+        <li><p>Time: {{singleDemo.time}}</p></li>
+        <li><p>Location: {{singleDemo.location}}</p></li>
+        <li><p>Who: {{singleDemo.who}}</p></li>
+        <li><p>Why: {{singleDemo.why}}</p></li>
+        <li><p>Breakfast: ${{singleDemo.breakfast}}</p></li>
+        <li><p>Lunch: ${{singleDemo.lunch}}</p></li>
+        <li><p>Dinner: ${{singleDemo.dinner}}</p></li>
+        <li><p>Golf: ${{singleDemo.golf}}</p></li>
+        <li><p>Cocktails: ${{singleDemo.cocktails}}</p></li>
+        <li><p>Office Supplies: ${{singleDemo.office_supplies}}</p></li>
+        <li><p>Other: ${{singleDemo.other}}</p></li>
+        <li><p>Beginning Mileage: {{singleDemo.beg_miles}}</p></li>
+        <li><p>Ending Mileage: {{singleDemo.end_miles}}</p></li>
       </ul>
     </div>
   </section>
