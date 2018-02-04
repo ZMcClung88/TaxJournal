@@ -49,7 +49,7 @@
 
     <div class="singleEntry">
       <ul>
-        <li ng-hide="singleEntry.date == null"><p>Date: {{singleEntry.date}}</p></li>
+        <li ng-hide="singleEntry.date == null"><p>Date: {{singleEntry.date | date: 'MMMM dd, yyyy'}}</p></li>
         <li ng-hide="singleEntry.time == null"><p>Time: {{singleEntry.time}}</p></li>
         <li ng-hide="singleEntry.location == null"><p>Location: {{singleEntry.location}}</p></li>
         <li ng-hide="singleEntry.who == null"><p>Who: {{singleEntry.who}}</p></li>
@@ -63,6 +63,7 @@
         <li ng-hide="singleEntry.other == null"><p>Other: ${{singleEntry.other}}</p></li>
         <li ng-hide="singleEntry.beg_miles == null"><p>Beginning Mileage: {{singleEntry.beg_miles}}</p></li>
         <li ng-hide="singleEntry.end_miles == null"><p>Ending Mileage: {{singleEntry.end_miles}}</p></li>
+        <li ng-hide="totalMiles == null"><p>Total Mileage: {{totalMiles}}</p></li>
       </ul>
     </div>
   </section>

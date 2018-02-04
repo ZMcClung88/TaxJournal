@@ -56,7 +56,7 @@
 
     <div class="entry">
       <ul>
-        <li ng-hide="singleDemo.date == null"><p>Date: {{singleDemo.date}}</p></li>
+        <li ng-hide="singleDemo.date == null"><p>Date: {{singleDemo.date | date: 'MMMM dd, yyyy'}}</p></li>
         <li ng-hide="singleDemo.time == null"><p>Time: {{singleDemo.time}}</p></li>
         <li ng-hide="singleDemo.location == null"><p>Location: {{singleDemo.location}}</p></li>
         <li ng-hide="singleDemo.who == null"><p>Who: {{singleDemo.who}}</p></li>
