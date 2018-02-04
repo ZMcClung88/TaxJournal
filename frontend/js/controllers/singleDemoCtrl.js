@@ -14,6 +14,7 @@ angular.module('myApp').controller('singleDemoCtrl', function($scope, mainSrvc, 
         response.data[0].office_supplies +
         response.data[0].other;
       console.log('total', $scope.total);
+      $scope.totalMiles = response.data[0].end_miles - response.data[0].beg_miles;
     });
   };
   $scope.getSingleDemo();
