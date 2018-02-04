@@ -41,9 +41,28 @@
     </br>
     </br>
     </br>
-    <div class="singleEntry" ng-repeat="s in singleEntry">
+    <!-- <div class="singleEntry" ng-repeat="s in singleEntry">
       <ul>
         <li>{{ s }}</li>
+      </ul>
+    </div> -->
+
+    <div class="singleEntry">
+      <ul>
+        <li ng-hide="singleEntry.date == null"><p>Date: {{singleEntry.date}}</p></li>
+        <li ng-hide="singleEntry.time == null"><p>Time: {{singleEntry.time}}</p></li>
+        <li ng-hide="singleEntry.location == null"><p>Location: {{singleEntry.location}}</p></li>
+        <li ng-hide="singleEntry.who == null"><p>Who: {{singleEntry.who}}</p></li>
+        <li ng-hide="singleEntry.why == null"><p>Why: {{singleEntry.why}}</p></li>
+        <li ng-hide="singleEntry.breakfast == null"><p>Breakfast: ${{singleEntry.breakfast}}</p></li>
+        <li ng-hide="singleEntry.lunch == null"><p>Lunch: ${{singleEntry.lunch}}</p></li>
+        <li ng-hide="singleEntry.dinner == null"><p>Dinner: ${{singleEntry.dinner}}</p></li>
+        <li ng-hide="singleEntry.golf == null"><p>Golf: ${{singleEntry.golf}}</p></li>
+        <li ng-hide="singleEntry.cocktails == null"><p>Cocktails: ${{singleEntry.cocktails}}</p></li>
+        <li ng-hide="singleEntry.office_supplies == null"><p>Office Supplies: ${{singleEntry.office_supplies}}</p></li>
+        <li ng-hide="singleEntry.other == null"><p>Other: ${{singleEntry.other}}</p></li>
+        <li ng-hide="singleEntry.beg_miles == null"><p>Beginning Mileage: {{singleEntry.beg_miles}}</p></li>
+        <li ng-hide="singleEntry.end_miles == null"><p>Ending Mileage: {{singleEntry.end_miles}}</p></li>
       </ul>
     </div>
   </section>

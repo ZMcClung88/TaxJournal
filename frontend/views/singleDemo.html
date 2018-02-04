@@ -56,20 +56,20 @@
 
     <div class="entry">
       <ul>
-        <li><p>Date: {{singleDemo.date}}</p></li>
-        <li><p>Time: {{singleDemo.time}}</p></li>
-        <li><p>Location: {{singleDemo.location}}</p></li>
-        <li><p>Who: {{singleDemo.who}}</p></li>
-        <li><p>Why: {{singleDemo.why}}</p></li>
-        <li><p>Breakfast: ${{singleDemo.breakfast}}</p></li>
-        <li><p>Lunch: ${{singleDemo.lunch}}</p></li>
-        <li><p>Dinner: ${{singleDemo.dinner}}</p></li>
-        <li><p>Golf: ${{singleDemo.golf}}</p></li>
-        <li><p>Cocktails: ${{singleDemo.cocktails}}</p></li>
-        <li><p>Office Supplies: ${{singleDemo.office_supplies}}</p></li>
-        <li><p>Other: ${{singleDemo.other}}</p></li>
-        <li><p>Beginning Mileage: {{singleDemo.beg_miles}}</p></li>
-        <li><p>Ending Mileage: {{singleDemo.end_miles}}</p></li>
+        <li ng-hide="singleDemo.date == null"><p>Date: {{singleDemo.date}}</p></li>
+        <li ng-hide="singleDemo.time == null"><p>Time: {{singleDemo.time}}</p></li>
+        <li ng-hide="singleDemo.location == null"><p>Location: {{singleDemo.location}}</p></li>
+        <li ng-hide="singleDemo.who == null"><p>Who: {{singleDemo.who}}</p></li>
+        <li ng-hide="singleDemo.why == null"><p>Why: {{singleDemo.why}}</p></li>
+        <li ng-hide="singleDemo.breakfast == null"><p>Breakfast: ${{singleDemo.breakfast}}</p></li>
+        <li ng-hide="singleDemo.lunch == null"><p>Lunch: ${{singleDemo.lunch}}</p></li>
+        <li ng-hide="singleDemo.dinner == null"><p>Dinner: ${{singleDemo.dinner}}</p></li>
+        <li ng-hide="singleDemo.golf == null"><p>Golf: ${{singleDemo.golf}}</p></li>
+        <li ng-hide="singleDemo.cocktails == null"><p>Cocktails: ${{singleDemo.cocktails}}</p></li>
+        <li ng-hide="singleDemo.office_supplies == null"><p>Office Supplies: ${{singleDemo.office_supplies}}</p></li>
+        <li ng-hide="singleDemo.other == null"><p>Other: ${{singleDemo.other}}</p></li>
+        <li ng-hide="singleDemo.beg_miles == null"><p>Beginning Mileage: {{singleDemo.beg_miles}}</p></li>
+        <li ng-hide="singleDemo.end_miles == null"><p>Ending Mileage: {{singleDemo.end_miles}}</p></li>
       </ul>
     </div>
   </section>
