@@ -5,8 +5,17 @@ angular.module('myApp').controller('singleEntryCtrl', function($scope, mainSrvc,
     mainSrvc.getSingleEntry($stateParams.id).then(function(response) {
       $scope.singleEntry = response;
       // console.log('singleEntry', $scope.singleEntry);
+      $scope.total =
+        response.breakfast +
+        response.lunch +
+        response.dinner +
+        response.golf +
+        response.cocktails +
+        response.office_supplies +
+        response.other;
+      // console.log('total', $scope.total);
       $scope.totalMiles = response.end_miles - response.beg_miles;
-      console.log('miles', $scope.totalMiles);
+      // console.log('miles', $scope.totalMiles);
     });
   };
   $scope.getSingleEntry();

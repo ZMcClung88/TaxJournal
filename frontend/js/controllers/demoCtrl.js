@@ -5,23 +5,36 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
     mainSrvc.getAllEntries().then(response => {
       $scope.entries = response;
 
-      $scope.total = response.map(entry => {
-        return entry.breakfast + entry.lunch + entry.dinner + entry.golf + entry.cocktails + entry.office_supplies + entry.other
-      }).reduce((acc, cur) => acc += cur);
+      $scope.total = response
+        .map(entry => {
+          return (
+            entry.breakfast +
+            entry.lunch +
+            entry.dinner +
+            entry.golf +
+            entry.cocktails +
+            entry.office_supplies +
+            entry.other
+          );
+        })
+        .reduce((acc, cur) => (acc += cur));
 
-      $scope.totalMiles = response.map(entry => {
-        return entry.end_miles - entry.beg_miles;
-      }).reduce((acc, cur) => acc += cur);
+      $scope.totalMiles = response
+        .map(entry => {
+          return entry.end_miles - entry.beg_miles;
+        })
+        .reduce((acc, cur) => (acc += cur));
 
-      $scope.totalMeals = response.map(entry => {
-        return entry.breakfast + entry.lunch + entry.dinner + entry.cocktails;
-      }).reduce((acc, cur) => acc += cur);
-
-    })
+      $scope.totalMeals = response
+        .map(entry => {
+          return entry.breakfast + entry.lunch + entry.dinner + entry.cocktails;
+        })
+        .reduce((acc, cur) => (acc += cur));
+    });
   };
   $scope.getAllEntries();
 
-  $scope.addEntry = (entry) => {
+  $scope.addEntry = entry => {
     // console.log('working here', entry)
 
     mainSrvc.addEntry(entry).then(response => {
@@ -41,21 +54,21 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
       $scope.entry.other = '';
 
       swal({
-        title: "Success",
-        text: "Entry Added!",
-        icon: "success"
+        title: 'Success',
+        text: 'Entry Added!',
+        icon: 'success'
       });
-    })
-  }
+    });
+  };
 
   if ($rootScope.loggedUser) {
-    console.log("!!!im working!!!")
-    $("#login").hide();
-    $("#register").hide();
-  } else{
-    console.log("!!!im not working!!!")
-    $("#account").hide();
-    $("#home_greeting").hide();
+    console.log('!!!im working!!!');
+    $('#login').hide();
+    $('#register').hide();
+  } else {
+    console.log('!!!im not working!!!');
+    $('#account').hide();
+    $('#home_greeting').hide();
   }
 
   $('#add-btn').on('click', function() {
@@ -63,16 +76,13 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
     $('#add').css('display', 'flex');
     $('#all').hide();
     $('#graph').hide();
-  }),
-  $('#all-btn').on('click', function() {
+  }), $('#all-btn').on('click', function() {
     $('#add').hide();
     $('#all').show();
     $('#graph').hide();
-  }),
-  $('#graph-btn').on('click', function() {
+  }), $('#graph-btn').on('click', function() {
     $('#add').hide();
     $('#all').hide();
     $('#graph').show();
-  })
-
-})
+  });
+});

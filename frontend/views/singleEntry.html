@@ -61,9 +61,10 @@
         <li ng-hide="singleEntry.cocktails == null"><p>Cocktails: ${{singleEntry.cocktails}}</p></li>
         <li ng-hide="singleEntry.office_supplies == null"><p>Office Supplies: ${{singleEntry.office_supplies}}</p></li>
         <li ng-hide="singleEntry.other == null"><p>Other: ${{singleEntry.other}}</p></li>
+        <li><p>Total: ${{total}}</p></li>
         <li ng-hide="singleEntry.beg_miles == null"><p>Beginning Mileage: {{singleEntry.beg_miles}}</p></li>
         <li ng-hide="singleEntry.end_miles == null"><p>Ending Mileage: {{singleEntry.end_miles}}</p></li>
-        <li ng-hide="totalMiles == null"><p>Total Mileage: {{totalMiles}}</p></li>
+        <li ng-hide="totalMiles <= 0"><p>Total Mileage: {{totalMiles}}</p></li>
       </ul>
     </div>
   </section>

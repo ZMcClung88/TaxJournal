@@ -68,8 +68,10 @@
         <li ng-hide="singleDemo.cocktails == null"><p>Cocktails: ${{singleDemo.cocktails}}</p></li>
         <li ng-hide="singleDemo.office_supplies == null"><p>Office Supplies: ${{singleDemo.office_supplies}}</p></li>
         <li ng-hide="singleDemo.other == null"><p>Other: ${{singleDemo.other}}</p></li>
+        <li><p>Total: ${{total}}</p></li>
         <li ng-hide="singleDemo.beg_miles == null"><p>Beginning Mileage: {{singleDemo.beg_miles}}</p></li>
         <li ng-hide="singleDemo.end_miles == null"><p>Ending Mileage: {{singleDemo.end_miles}}</p></li>
+        <li ng-hide="totalMiles <= 0"><p>Total Mileage: {{singleDemo.end_miles}}</p></li>
       </ul>
     </div>
   </section>
