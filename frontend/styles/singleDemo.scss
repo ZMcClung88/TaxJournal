@@ -16,7 +16,11 @@
     border: 1px solid white;
 
     .entry {
-      color: white;
+      color: black;
+      background-color: lightgrey;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 5%;
       line-height: 38px;
       font-size: 32px;
       letter-spacing: 2px;

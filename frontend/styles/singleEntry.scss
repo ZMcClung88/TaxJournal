@@ -13,13 +13,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
 
     .singleEntry {
-      color: white;
+      color: black;
+      background-color: lightgrey;
+      border: 2px solid white;
+      border-radius: 5px;
       line-height: 38px;
       font-size: 32px;
       letter-spacing: 2px;
+      padding: 5%;
     }
   }
 }
