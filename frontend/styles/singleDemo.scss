@@ -16,13 +16,16 @@
     border: 1px solid white;
 
     .entry {
+      height: 50%;
+      width: 50%;
+      overflow: scroll;
       color: black;
       background-color: lightgrey;
       border: 1px solid white;
       border-radius: 5px;
       padding: 5%;
-      line-height: 38px;
-      font-size: 32px;
+      line-height: 36px;
+      font-size: 30px;
       letter-spacing: 2px;
     }
   }
