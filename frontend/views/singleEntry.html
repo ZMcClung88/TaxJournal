@@ -67,5 +67,9 @@
         <li ng-hide="totalMiles <= 0"><p>Total Mileage: {{totalMiles}}</p></li>
       </ul>
     </div>
+    <div class="button">
+      <button type="button" name="button">Back</button>
+      <button ng-click="deleteEntry(singleEntry.id)" type="button" name="button">Delete</button>
+    </div>
   </section>
 </div>

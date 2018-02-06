@@ -15,6 +15,18 @@ angular.module('myApp').service('mainSrvc', function($http, $rootScope) {
       return response.data.entry;
     });
   };
+  // this.deleteItemInCart = (product, user) => {
+  //    return $http({
+  //      method: 'DELETE',
+  //      url: '/cart/clear/' + product + '/' + user
+  //    }).then(response => response)
+  //  };
+  this.deleteEntry = id => {
+    return $http({
+      method: 'DELETE',
+      url: '/api/deleteEntry/' + id + '/'
+    }).then(console.log('made it this far'));
+  };
 
   // this.getSingleProduct = (param) => {
   // return $http({

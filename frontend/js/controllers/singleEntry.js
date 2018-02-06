@@ -4,7 +4,7 @@ angular.module('myApp').controller('singleEntryCtrl', function($scope, mainSrvc,
   $scope.getSingleEntry = () => {
     mainSrvc.getSingleEntry($stateParams.id).then(function(response) {
       $scope.singleEntry = response;
-      // console.log('singleEntry', $scope.singleEntry);
+      console.log('singleEntry', $scope.singleEntry);
       $scope.total =
         response.breakfast +
         response.lunch +
@@ -19,6 +19,11 @@ angular.module('myApp').controller('singleEntryCtrl', function($scope, mainSrvc,
     });
   };
   $scope.getSingleEntry();
+
+  $scope.deleteEntry = id => {
+    console.log('delete button', id);
+    mainSrvc.deleteEntry(id).then();
+  };
 
   if ($rootScope.loggedUser) {
     // console.log("!!!singleEntry is working!!!")
