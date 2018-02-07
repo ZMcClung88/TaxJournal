@@ -1,4 +1,4 @@
-angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, mainSrvc, $location, $timeout) {
+angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, mainSrvc, $location, $timeout, $state) {
   $scope.user = $rootScope.loggedUser;
   $scope.userId = $rootScope.loggedUser.user_id;
   // sessionStorage.setItem("user", JSON.stringify($scope.user));
