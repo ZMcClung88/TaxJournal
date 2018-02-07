@@ -22,7 +22,8 @@ angular.module('myApp').controller('singleEntryCtrl', function($scope, mainSrvc,
 
   $scope.deleteEntry = id => {
     console.log('delete button', id);
-    mainSrvc.deleteEntry(id).then('remiiiiixxxx', $state.reload());
+    mainSrvc.deleteEntry(id);
+    $state.reload();
   };
 
   if ($rootScope.loggedUser) {

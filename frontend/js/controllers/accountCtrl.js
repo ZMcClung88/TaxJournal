@@ -1,4 +1,4 @@
-angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, mainSrvc, $location, $timeout) {
+angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, mainSrvc, $location, $timeout) {
   $scope.user = $rootScope.loggedUser;
   $scope.userId = $rootScope.loggedUser.user_id;
   // sessionStorage.setItem("user", JSON.stringify($scope.user));
@@ -15,22 +15,36 @@ angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, m
       // sessionStorage.setItem("entries", JSON.stringify($scope.entries));
       // console.log("testing", sessionStorage.getItem("entries"));
 
-      $scope.total = response.map(entry => {
-        return entry.breakfast + entry.lunch + entry.dinner + entry.golf + entry.cocktails + entry.office_supplies + entry.other
-      }).reduce((acc, cur) => acc += cur);
+      $scope.total = response
+        .map(entry => {
+          return (
+            entry.breakfast +
+            entry.lunch +
+            entry.dinner +
+            entry.golf +
+            entry.cocktails +
+            entry.office_supplies +
+            entry.other
+          );
+        })
+        .reduce((acc, cur) => (acc += cur));
 
-      $scope.totalMiles = response.map(entry => {
-        return entry.end_miles - entry.beg_miles;
-      }).reduce((acc, cur) => acc += cur);
+      $scope.totalMiles = response
+        .map(entry => {
+          return entry.end_miles - entry.beg_miles;
+        })
+        .reduce((acc, cur) => (acc += cur));
 
-      $scope.totalMeals = response.map(entry => {
-        return entry.breakfast + entry.lunch + entry.dinner + entry.cocktails;
-      }).reduce((acc, cur) => acc += cur);
+      $scope.totalMeals = response
+        .map(entry => {
+          return entry.breakfast + entry.lunch + entry.dinner + entry.cocktails;
+        })
+        .reduce((acc, cur) => (acc += cur));
 
       $scope.date = response.map(entry => entry.date);
       // console.log($scope.date)
     });
-  }
+  };
   $scope.getUserEntries();
 
   $scope.userAddEntry = (entry, id) => {
@@ -54,32 +68,33 @@ angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, m
       $scope.entry.other = '';
 
       swal({
-        title: "Success",
-        text: "Entry Added!",
-        icon: "success"
+        title: 'Success',
+        text: 'Entry Added!',
+        icon: 'success'
       });
-    })
-  }
+    });
+    $state.reload(true);
+  };
 
   $scope.logOut = () => {
-    console.log("logging out!")
-     mainSrvc.logOut().then(response => {});
+    // console.log('logging out!');
+    mainSrvc.logOut().then(response => {});
 
-     $timeout(() => {
-       $location.path("login");
+    $timeout(() => {
+      $location.path('login');
       //  $scope.$apply();
-       $rootScope.$apply($rootScope.loggedUser = false);
-     }, 300);
-   };
+      $rootScope.$apply(($rootScope.loggedUser = false));
+    }, 300);
+  };
 
   if ($rootScope.loggedUser) {
     // console.log("!!!im working!!!")
-    $("#login").hide();
-    $("#register").hide()
+    $('#login').hide();
+    $('#register').hide();
   } else {
     // console.log("!!!im not working!!!")
-    $("#account").hide();
-    $("#home_greeting").hide();
+    $('#account').hide();
+    $('#home_greeting').hide();
   }
 
   $('#add-btn').on('click', function() {
@@ -87,18 +102,13 @@ angular.module("myApp").controller('accountCtrl', function($rootScope, $scope, m
     $('#add').css('display', 'flex');
     $('#all').hide();
     $('#graph').hide();
-  }),
-  $('#all-btn').on('click', function() {
+  }), $('#all-btn').on('click', function() {
     $('#add').hide();
     $('#all').show();
     $('#graph').hide();
-  }),
-  $('#graph-btn').on('click', function() {
+  }), $('#graph-btn').on('click', function() {
     $('#add').hide();
     $('#all').hide();
     $('#graph').show();
-  })
-
-
-
-})
+  });
+});

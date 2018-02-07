@@ -25,7 +25,7 @@ angular.module('myApp').service('mainSrvc', function($http, $rootScope) {
     return $http({
       method: 'DELETE',
       url: '/api/deleteEntry/' + id + '/'
-    }).then(console.log('made it this far'));
+    });
   };
 
   // this.getSingleProduct = (param) => {
@@ -41,7 +41,7 @@ angular.module('myApp').service('mainSrvc', function($http, $rootScope) {
   };
 
   this.register = user => {
-    console.log(user);
+    // console.log(user);
     return $http({
       method: 'POST',
       url: '/api/register',
