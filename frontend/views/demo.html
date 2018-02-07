@@ -67,7 +67,7 @@
               <p>${{entry.total3}}<p> -->
               <ul class="entry_list">
                 <li>{{entry.date | date:'MMMM dd, yyyy'}}</li>
-                <li>{{entry.time}}</li>
+                <li>{{entry.time | date: 'hh:mm a'}}</li>
                 <li>{{entry.location}}</li>
               </ul>
             </div>
