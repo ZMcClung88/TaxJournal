@@ -1,4 +1,4 @@
-angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootScope) {
+angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootScope, $state) {
   $scope.user = $rootScope.loggedUser;
 
   $scope.getAllEntries = () => {
@@ -58,6 +58,7 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
         text: 'Entry Added!',
         icon: 'success'
       });
+      $state.reload();
     });
   };
 
