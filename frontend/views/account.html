@@ -43,7 +43,7 @@
             <form class="" name="entry_form" ng-submit="userAddEntry(entry)" method="post">
               <!-- <input ng-model="entry.date" type="text" id="datepicker"> -->
               <input ng-model="entry.date" type="date" name="" value="2018-01-01" placeholder="Date">
-              <input ng-model="entry.time" type="text" name="" value="" placeholder="Time">
+              <input ng-model="entry.time" type="time" name="" value="" placeholder="Time">
               <input ng-model="entry.who" type="text" name="" value="" placeholder="Who">
               <input ng-model="entry.location" type="text" name="" value="" placeholder="Location">
               <input ng-model="entry.why" type="text" name="" value="" placeholder="Why">
@@ -70,7 +70,7 @@
               <p>${{entry.total3}}<p> -->
               <ul class="entry_list">
                 <li>{{entry.date | date:'MMMM dd, yyyy'}}</li>
-                <li>{{entry.time}}</li>
+                <li>{{entry.time | date: 'hh:mm a'}}</li>
                 <li>{{entry.location}}</li>
               </ul>
             </div>

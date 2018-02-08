@@ -73,7 +73,7 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
         icon: 'success'
       });
     });
-    $state.reload(true);
+    $state.reload();
   };
 
   $scope.logOut = () => {
