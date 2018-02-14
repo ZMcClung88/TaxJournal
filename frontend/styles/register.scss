@@ -83,13 +83,21 @@
       }
 
       button {
-        display: flex;
-        align-self: flex-end;
-        align-items: center;
+        // display: flex;
+        // align-self: flex-end;
+        // align-items: center;
         height: 38px;
-        width: 35%;
+        width: 50%;
         background-color: transparent;
+        border: 1px solid black;
         font-size: 16px;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: bolder;
+      }
+
+      button:hover {
+        background-color: skyblue;
       }
 
       .newsletter_radio {

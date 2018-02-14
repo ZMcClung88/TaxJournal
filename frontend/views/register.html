@@ -13,11 +13,11 @@
   </div>
 
   <section class="register_form_section">
-    <form class="register_form;" ng-submit="register(user)" method="post">
-      <input ng-model="user.first_name" type="text" name="firstName" value="" placeholder="First Name" required>
-      <input ng-model="user.last_name" type="text" name="lastName" value="" placeholder="Last Name" required>
-      <input ng-model="user.email" type="text" name="email" value="" placeholder="Email" required>
-      <input ng-model="user.password" type="text" name="password" value="" placeholder="Password" required>
+    <form class="register_form;" ng-submit="register(user)" method="post" autocomplete="off">
+      <input ng-model="user.first_name" type="text" name="firstName" value="" placeholder="First Name" autocomplete="off" required>
+      <input ng-model="user.last_name" type="text" name="lastName" value="" placeholder="Last Name" autocomplete="off" required>
+      <input ng-model="user.email" type="text" name="email" value="" placeholder="Email" autocomplete="off" required>
+      <input ng-model="user.password" type="text" name="password" value="" placeholder="Password" autocomplete="off" required>
       <!-- <input ng-model="user.password_confirm" type="text" name="passwordConfirm" value="" placeholder="Confirm Password"> -->
       <div class="newsletter_radio">
         <label for="radio_newsletter">Newsletter</label>
