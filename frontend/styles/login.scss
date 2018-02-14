@@ -6,7 +6,8 @@
   // justify-content: center;
   // align-items: center;
   // flex-direction: column;
-  background: url('/img/images/laptop-windows-keyboard-light-86188.jpeg') no-repeat center fixed;
+  background: linear-gradient(to bottom right, #26bcbc, #43b9e8);
+  // background: url('/img/images/laptop-windows-keyboard-light-86188.jpeg') no-repeat center fixed;
 
   .login_header {
     width: 99%;
@@ -15,12 +16,11 @@
     // flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: lightgrey;
+    // background-color: lightgrey;
     padding-left: 20px;
     padding-right: 20px;
     position: fixed;
     font-family: sans-serif;
-
 
     a {
       text-decoration: none;
@@ -59,8 +59,8 @@
     .form_fields {
       height: 50%;
       width: 50%;
-      border: 1px solid black;
-      background-color: lightgrey;
+      // border: 1px solid black;
+      // background-color: lightgrey;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -78,10 +78,11 @@
       }
 
       input {
-        font-size: 16px;
-        height: 24px;
+        font-size: 20px;
+        height: 36px;
         width: 33%;
-        border-radius: 5px;
+        border: none;
+        margin-bottom: 2%;
       }
 
       button {
