@@ -3,7 +3,6 @@ body {
     width: 100%;
     font-family: sans-serif;
 
-
     .header {
       width: 100vw;
       height: 10vh;
@@ -16,7 +15,6 @@ body {
       padding-right: 20px;
       position: fixed;
       font-family: sans-serif;
-
 
       a {
         text-decoration: none;
@@ -50,7 +48,6 @@ body {
 
     .header.active {
       background-color: white;
-      
     }
 
     .home_content {
@@ -66,7 +63,6 @@ body {
         align-items: center;
         flex-direction: column;
         letter-spacing: 3px;
-
 
         p {
           font-size: 28px;

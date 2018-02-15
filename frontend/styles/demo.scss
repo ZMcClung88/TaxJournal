@@ -9,7 +9,7 @@
   padding-right: 20px;
   position: fixed;
   font-family: sans-serif;
-  background-color: lightgrey;
+  // background-color: lightgrey;
 
   a {
     text-decoration: none;
@@ -48,7 +48,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('/img/images/cathryn-lavery-67852.jpg') no-repeat center fixed;
+  background: #2193b0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2193b0, #6dd5ed); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #2193b0,
+    #6dd5ed
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background: url('/img/images/cathryn-lavery-67852.jpg') no-repeat center fixed;
 
   .demo_content {
     // border: 1px solid blue;
@@ -123,7 +130,6 @@
             width: 90%;
             height: 40%;
             padding-left: 12.5%;
-
 
             input {
               height: 22px;
