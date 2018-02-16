@@ -79,29 +79,34 @@
         // border: 2px solid pink;
         display: flex;
         justify-content: space-around;
+        flex-direction: column;
         align-items: center;
         background-color: lightgrey;
 
-        .panel_buttons {
-          // border: 2px solid limegreen;
-          height: 50%;
-          width: 75%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-
-          li {
-            border: 1px solid red;
-            height: 30%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          li:hover {
-            background-color: red;
-          }
+        a:visited {
+          color: black;
         }
+
+        // .panel_buttons {
+        //   // border: 2px solid limegreen;
+        //   height: 50%;
+        //   width: 75%;
+        //   display: flex;
+        //   flex-direction: column;
+        //   justify-content: space-between;
+        //
+        //   li {
+        //     border: 1px solid red;
+        //     height: 30%;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //   }
+        //
+        //   li:hover {
+        //     background-color: red;
+        //   }
+        // }
       }
 
       .display {

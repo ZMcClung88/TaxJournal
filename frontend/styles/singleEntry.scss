@@ -35,5 +35,18 @@
       letter-spacing: 2px;
       padding: 5%;
     }
+
+    .button {
+      width: 20%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2%;
+      background-color: none;
+      // border: 2px solid blue;
+
+      a:visited {
+        color: black;
+      }
+    }
   }
 }

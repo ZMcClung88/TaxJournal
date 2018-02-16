@@ -68,8 +68,10 @@
       </ul>
     </div>
     <div class="button">
-      <button ui-sref="account" type="button" name="button">Back</button>
-      <button ng-click="deleteEntry(singleEntry.id)" ui-sref="account" type="button" name="button">Delete</button>
+      <a ui-sref="account"><i class="fas fa-arrow-left fa-4x"></i></a>
+      <a ng-click="deleteEntry(singleEntry.id)" ui-sref="account"><i class="fas fa-times fa-4x"></i></a>
+      <!-- <button ui-sref="account" type="button" name="button"><i class="fas fa-arrow-left fa-4x"></i></button>
+      <button ng-click="deleteEntry(singleEntry.id)" ui-sref="account" type="button" name="button"><i class="fas fa-times fa-4x"></i></button> -->
     </div>
   </section>
 </div>
