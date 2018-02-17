@@ -130,14 +130,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            // border: 2px solid black;
+            border: 2px solid black;
             border-radius: 10px;
-            width: 90%;
-            height: 40%;
+            width: 60%;
+            height: 75%;
             padding-left: 12.5%;
 
             input {
-              height: 22px;
+              height: 25px;
+              width: 20%;
             }
           }
         }

@@ -34,4 +34,13 @@ angular.module('myApp').controller('singleEntryCtrl', function($scope, mainSrvc,
     // console.log("!!!im not working!!!")
     $('#account').hide();
   }
+
+  $('#delete_entry').on('click', function() {
+    $('#delete_entry_modal').show();
+    $('#delete_entry_modal').css('display', 'flex');
+  });
+
+  $('#keep_entry').on('click', function() {
+    $('#delete_entry_modal').hide();
+  });
 });

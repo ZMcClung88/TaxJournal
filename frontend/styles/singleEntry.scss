@@ -36,6 +36,43 @@
       padding: 5%;
     }
 
+    .delete_entry_modal {
+      height: 35%;
+      width: 40%;
+      display: none;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 5px;
+      position: absolute;
+      text-align: center;
+      padding: 25px;
+
+      .delete_title {
+        h1 {
+          text-transform: uppercase;
+          font-size: 36px;
+          font-family: Arial;
+        }
+      }
+
+      .delete_buttons {
+        // border: 1px solid blue;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+
+        #keep_entry {
+          color: red;
+        }
+
+        #delete_entry_confirm {
+          color: green;
+        }
+      }
+    }
+
     .button {
       width: 20%;
       display: flex;

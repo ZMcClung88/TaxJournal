@@ -67,9 +67,19 @@
         <li ng-hide="totalMiles <= 0"><p>Total Mileage: {{totalMiles}}</p></li>
       </ul>
     </div>
+    <div class="delete_entry_modal" id="delete_entry_modal">
+      <div class="delete_title">
+        <h1>delete entry?</h1>
+      </div>
+      <div class="delete_buttons">
+        <a ng-click="deleteEntry(singleEntry.id)" ui-sref="account" id="delete_entry_confirm"><i class="fas fa-check-circle fa-4x"></a>
+        <a id="keep_entry"><i class="fas fa-times-circle fa-4x"></a>
+      </div>
+    </div>
     <div class="button">
       <a ui-sref="account"><i class="fas fa-arrow-left fa-4x"></i></a>
-      <a ng-click="deleteEntry(singleEntry.id)" ui-sref="account"><i class="fas fa-times fa-4x"></i></a>
+      <a id="delete_entry"><i class="fas fa-times fa-4x"></i></a>
+      <!-- <a ng-click="deleteEntry(singleEntry.id)" ui-sref="account"><i class="fas fa-times fa-4x"></i></a> -->
       <!-- <button ui-sref="account" type="button" name="button"><i class="fas fa-arrow-left fa-4x"></i></button>
       <button ng-click="deleteEntry(singleEntry.id)" ui-sref="account" type="button" name="button"><i class="fas fa-times fa-4x"></i></button> -->
     </div>
