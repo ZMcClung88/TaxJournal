@@ -47,6 +47,7 @@
       border-radius: 5px;
       position: absolute;
       text-align: center;
+      box-shadow: 10px 10px 5px grey;
       padding: 25px;
 
       .delete_title {
@@ -65,10 +66,12 @@
 
         #keep_entry {
           color: red;
+          cursor: pointer;
         }
 
         #delete_entry_confirm {
           color: green;
+          cursor: pointer;
         }
       }
     }
