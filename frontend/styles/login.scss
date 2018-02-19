@@ -76,11 +76,13 @@
       flex-direction: column;
       line-height: 30px;
       border-radius: 5px;
+      font-family: Arial;
 
       .user_login {
         // border: 1px solid red;
         margin-bottom: 5%;
         font-size: 18px;
+        font-family: Arial;
       }
 
       h1 {
@@ -111,9 +113,13 @@
         padding-left: 1%;
       }
 
+      input:focus {
+        border-bottom: 2px solid black;
+      }
+
       button {
-        width: 20%;
-        height: 75px;
+        width: 17%;
+        height: 150px;
         margin-top: 25px;
         background-color: transparent;
         border: 1px solid black;
