@@ -144,10 +144,6 @@
               // border: none;
             }
 
-            input:focus {
-              // border: 1px solid black;
-            }
-
             .add_submit_button {
               // border: 1px solid blue;
               width: 74%;
@@ -163,6 +159,11 @@
                 letter-spacing: 1px;
                 font-weight: bolder;
               }
+            }
+
+            .zero_entry {
+              position: absolute;
+              z-index: -1;
             }
           }
         }
