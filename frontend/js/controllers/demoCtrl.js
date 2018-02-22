@@ -30,6 +30,20 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
           return entry.breakfast + entry.lunch + entry.dinner + entry.cocktails;
         })
         .reduce((acc, cur) => (acc += cur));
+      console.log('total meals', $scope.totalMeals);
+
+      $scope.totalSupplies = response
+        .map(entry => {
+          return entry.office_supplies;
+        })
+        .reduce((acc, cur) => (acc += cur));
+      console.log('total supply', $scope.totalSupplies);
+
+      $scope.totalLeisure = response
+        .map(entry => {
+          return entry.golf + entry.cocktails;
+        })
+        .reduce((acc, cur) => (acc += cur));
     });
   };
   $scope.getAllEntries();

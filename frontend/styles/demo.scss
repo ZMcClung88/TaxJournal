@@ -228,11 +228,20 @@
             height: 450px;
             width: 435px;
             margin-top: 20px;
+            color: white;
+            font-family: Tahoma;
+            // display: flex;
 
             .block {
               border: 3px solid black;
               height: 130px;
               width: 130px;
+              border-radius: 5px;
+              background-color: black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
             }
 
             .row1 {
@@ -240,6 +249,10 @@
               height: 31%;
               display: flex;
               justify-content: space-between;
+
+              h1 {
+                font-size: 40px;
+              }
             }
 
             .row2 {
@@ -248,15 +261,30 @@
               display: flex;
               flex-direction: row;
 
+              h1 {
+                font-size: 40px;
+              }
+
               .row2_left {
                 // border: 1px solid pink;
                 width: 66%;
+                display: flex;
 
                 .total_expense {
                   border: 3px solid black;
+                  border-radius: 5px;
                   height: 95%;
                   width: 97%;
                   margin-top: 5px;
+                  background-color: black;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+
+                  h1 {
+                    font-size: 80px;
+                  }
                 }
               }
 
@@ -270,6 +298,10 @@
 
                 .total_supplies {
                   margin-right: -4px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
                 }
 
                 .total_leisure {
