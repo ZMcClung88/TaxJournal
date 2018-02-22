@@ -202,8 +202,82 @@
           }
         }
 
-        .stats_wrapper {
-          border: 1px solid black;
+        #graph {
+          display: none;
+
+          // .chart {
+          //   border: 2px solid green;
+          //   height: 400px;
+          //   width: 500px;
+          //   display: flex;
+          //   justify-content: center;
+          //   align-items: center;
+          //
+          //   .chart div {
+          //     font: 10px sans-serif;
+          //     background-color: steelblue;
+          //     text-align: right;
+          //     padding: 3px;
+          //     margin: 1px;
+          //     color: white;
+          //   }
+          // }
+
+          .wrapper {
+            // border: 2px solid black;
+            height: 450px;
+            width: 435px;
+            margin-top: 20px;
+
+            .block {
+              border: 3px solid black;
+              height: 130px;
+              width: 130px;
+            }
+
+            .row1 {
+              // border: 1px solid red;
+              height: 31%;
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .row2 {
+              // border: 1px solid red;
+              height: 66%;
+              display: flex;
+              flex-direction: row;
+
+              .row2_left {
+                // border: 1px solid pink;
+                width: 66%;
+
+                .total_expense {
+                  border: 3px solid black;
+                  height: 95%;
+                  width: 97%;
+                  margin-top: 5px;
+                }
+              }
+
+              .row2_right {
+                // border: 1px solid pink;
+                width: 33%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-end;
+
+                .total_supplies {
+                  margin-right: -4px;
+                }
+
+                .total_leisure {
+                  margin-right: -4px;
+                }
+              }
+            }
+          }
         }
       }
     }

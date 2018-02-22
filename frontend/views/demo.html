@@ -76,7 +76,7 @@
             </div>
           <!-- </div> -->
         </div>
-        <div class="stats_wrapper" id="graph">
+        <div class="graph" id="graph">
             <!-- <div class="chart">
               <ul>
                 <li>Total Entries: {{ entries.length }}</li>
@@ -86,22 +86,32 @@
               </ul>
             </div>
             <div bar-chartbar-height="20"bar-padding="5"></div> -->
-          <div class="row1">
-            <div class="total_entries"></div>
-            <div class="total_miles"></div>
-            <div class="total_meals"></div>
-          </div>
-          <div class="row2">
-            <div class="row2_left">
-              <div class="total_expense"></div>
-            </div>
-            <div class="row2_right">
-              <div class="total_supplies"></div>
-              <div class="total_leisure"></div>
-            </div>
+            <div class="wrapper">
+              <div class="row1">
+                <div class="total_entries block">
+                  <h1>{{entries.length}}</h1>
+                  <p>Total Entries</p>
+                </div>
+                <div class="total_miles block">
+                  <h1>{{totalMiles}}</h1>
+                  <p>Total Miles Driven</p>
+                </div>
+                <div class="total_meals block">
+                  <h1>{{total.Meals}}</h1>
+                  <p>Total Meals</p>
+                </div>
+              </div>
+              <div class="row2">
+                <div class="row2_left">
+                  <div class="total_expense"></div>
+                </div>
+                <div class="row2_right">
+                  <div class="total_supplies block"></div>
+                  <div class="total_leisure block"></div>
+                </div>
+              </div>
           </div>
         </div>
-      </div>
 
     </div>
   </div>
