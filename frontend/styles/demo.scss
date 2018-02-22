@@ -202,26 +202,8 @@
           }
         }
 
-        #graph {
-          display: none;
-
-          .chart {
-            border: 2px solid green;
-            height: 400px;
-            width: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .chart div {
-              font: 10px sans-serif;
-              background-color: steelblue;
-              text-align: right;
-              padding: 3px;
-              margin: 1px;
-              color: white;
-            }
-          }
+        .stats_wrapper {
+          border: 1px solid black;
         }
       }
     }
