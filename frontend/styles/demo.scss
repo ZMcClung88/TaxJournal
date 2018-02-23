@@ -223,6 +223,10 @@
           //   }
           // }
 
+          #account_wrapper {
+            margin-bottom: 20px;
+          }
+
           .wrapper {
             // border: 2px solid black;
             height: 450px;
@@ -231,6 +235,12 @@
             color: white;
             font-family: Tahoma;
             // display: flex;
+
+            span {
+              font-size: 20px;
+              font-weight: normal;
+              // color: red;
+            }
 
             .block {
               border: 3px solid black;
@@ -252,6 +262,7 @@
 
               h1 {
                 font-size: 40px;
+                font-weight: bold;
                 margin-bottom: 20px;
               }
 
@@ -268,6 +279,7 @@
 
               h1 {
                 font-size: 40px;
+                font-weight: bold;
                 margin-bottom: 20px;
               }
 

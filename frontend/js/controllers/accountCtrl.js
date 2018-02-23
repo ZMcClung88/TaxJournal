@@ -43,6 +43,19 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
 
       $scope.date = response.map(entry => entry.date);
       // console.log($scope.date)
+
+      $scope.totalSupplies = response
+        .map(entry => {
+          return entry.office_supplies;
+        })
+        .reduce((acc, cur) => (acc += cur));
+      console.log('total supply', $scope.totalSupplies);
+
+      $scope.totalLeisure = response
+        .map(entry => {
+          return entry.golf + entry.cocktails;
+        })
+        .reduce((acc, cur) => (acc += cur));
     });
   };
   $scope.getUserEntries();

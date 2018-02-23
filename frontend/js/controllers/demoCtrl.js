@@ -32,6 +32,9 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
         .reduce((acc, cur) => (acc += cur));
       console.log('total meals', $scope.totalMeals);
 
+      $scope.date = response.map(entry => entry.date);
+      // console.log($scope.date)
+
       $scope.totalSupplies = response
         .map(entry => {
           return entry.office_supplies;

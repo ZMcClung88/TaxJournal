@@ -65,7 +65,7 @@
             </form>
           </div>
         </div>
-        
+
         <div class="all" id="all">
           <!-- <div class=""> -->
             <div class="entry" ng-repeat="entry in entries" ui-sref="singleEntry({ id: entry.id })">
@@ -83,7 +83,7 @@
           <!-- </div> -->
         </div>
         <div class="graph" id="graph">
-            <div class="chart">
+            <!-- <div class="chart">
               <ul>
                 <li>Total Entries: {{ entries.length }}</li>
                 <li>Total Expenses: ${{ total }}</li>
@@ -91,7 +91,41 @@
                 <li>Total Miles: {{ totalMiles }}</li>
               </ul>
             </div>
-            <div bar-chartbar-height="20"bar-padding="5"></div>
+            <div bar-chartbar-height="20"bar-padding="5"></div> -->
+            <div class="wrapper" id="account_wrapper">
+              <div class="row1">
+                <div class="total_entries block">
+                  <h1>{{entries.length}}</h1>
+                  <p>Entries</p>
+                </div>
+                <div class="total_miles block">
+                  <h1>{{totalMiles}}</h1>
+                  <p>Miles Driven</p>
+                </div>
+                <div class="total_meals block">
+                  <h1><span>$</span>{{totalMeals}}</h1>
+                  <p>on meals</p>
+                </div>
+              </div>
+              <div class="row2">
+                <div class="row2_left">
+                  <div class="total_expense">
+                    <h1><span>$</span>{{total}}</h1>
+                    <p>Total Expense's</p>
+                  </div>
+                </div>
+                <div class="row2_right">
+                  <div class="total_supplies block">
+                    <h1><span>$</span>{{totalSupplies}}</h1>
+                    <p>on supplies</p>
+                  </div>
+                  <div class="total_leisure block">
+                    <h1><span>$</span>{{totalLeisure}}</h1>
+                    <p>on leisure</p>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
       </div>
 
