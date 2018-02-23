@@ -112,13 +112,16 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
     $('#add').css('display', 'flex');
     $('#all').hide();
     $('#graph').hide();
+    $('#reset_btn').hide();
   }), $('#all-btn').on('click', function() {
     $('#add').hide();
     $('#all').show();
     $('#graph').hide();
+    $('#reset_btn').show();
   }), $('#graph-btn').on('click', function() {
     $('#add').hide();
     $('#all').hide();
     $('#graph').show();
+    $('#reset_btn').show();
   });
 });
