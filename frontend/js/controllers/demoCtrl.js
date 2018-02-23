@@ -79,6 +79,13 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
     });
   };
 
+  $scope.deleteDemoEntries = () => {
+    mainSrvc.deleteDemoEntries().then(response => {
+      console.log('deleteDemoEntries working');
+      console.log(response);
+    });
+  };
+
   if ($rootScope.loggedUser) {
     console.log('!!!im working!!!');
     $('#login').hide();

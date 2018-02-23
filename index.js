@@ -84,6 +84,7 @@ app.get('/api/singleDemo/:id', mainControl.getSingleDemo);
 app.get('/api/singleEntry/:id', usersControl.getSingleEntry);
 app.post('/api/account/addEntry', usersControl.userAddEntry);
 app.delete('/api/deleteEntry/:id', usersControl.deleteEntry);
+app.delete('/api/deleteDemoEntries', mainControl.deleteDemoEntries);
 // app.get('/api/product/:id', productsControl.getSingleProduct);
 
 //// USERS ////

@@ -28,6 +28,13 @@ angular.module('myApp').service('mainSrvc', function($http, $rootScope) {
     });
   };
 
+  this.deleteDemoEntries = () => {
+    return $http({
+      method: 'DELETE',
+      url: '/api/deleteDemoEntries'
+    });
+  };
+
   // this.getSingleProduct = (param) => {
   // return $http({
   //   method: 'GET',
