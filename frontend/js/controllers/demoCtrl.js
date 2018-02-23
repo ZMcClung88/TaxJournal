@@ -3,6 +3,16 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
 
   $scope.getAllEntries = () => {
     mainSrvc.getAllEntries().then(response => {
+      console.log('resposne', response);
+
+      if (response.length === 0) {
+        $scope.total = 0;
+        $scope.totalMiles = 0;
+        $scope.totalMeals = 0;
+        $scope.totalSupplies = 0;
+        $scope.totalLeisure = 0;
+      }
+
       $scope.entries = response;
 
       $scope.total = response
@@ -81,9 +91,10 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
 
   $scope.deleteDemoEntries = () => {
     mainSrvc.deleteDemoEntries().then(response => {
-      console.log('deleteDemoEntries working');
-      console.log(response);
+      // console.log('deleteDemoEntries working');
+      // console.log(response);
     });
+    $state.reload();
   };
 
   if ($rootScope.loggedUser) {
