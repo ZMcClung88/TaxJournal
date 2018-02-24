@@ -36,10 +36,20 @@
         <a href="#" id="add-btn"><i class="fas fa-plus fa-4x"></a>
         <a href="#" id="all-btn"><i class="fas fa-book fa-4x"></a>
         <a href="#" id="graph-btn"><i class="fas fa-chart-area fa-4x"></a>
-        <a href="#" id="reset-btn" class="reset-btn" ng-click="deleteDemoEntries()"><button>reset</button></a>
+        <a href="#" id="reset-btn" class="reset-btn"><button>reset</button></a>
         <!-- <div class="reset_btn" id="reset_btn">
           <button ng-click="deleteDemoEntries()" ui-sref="demo" type="button" name="button">reset</button>
         </div> -->
+      </div>
+
+      <div class="reset_demo_modal" id="reset_demo_modal">
+        <div class="reset_title">
+          <h1>delete all demo entries?</h1>
+        </div>
+        <div class="reset_demo_buttons">
+          <a ng-click="deleteDemoEntries()" ui-sref="demo" id="delete_demo_confirm"><i class="fas fa-check-circle fa-4x"></a>
+          <a id="keep_demo"><i class="fas fa-times-circle fa-4x"></a>
+        </div>
       </div>
 
       <div class="display">

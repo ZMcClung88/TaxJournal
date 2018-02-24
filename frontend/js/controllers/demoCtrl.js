@@ -124,4 +124,11 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
     $('#graph').show();
     $('#reset_btn').show();
   });
+  $('#reset-btn').on('click', function() {
+    $('#reset_demo_modal').show();
+    $('#reset_demo_modal').css('display', 'flex');
+  });
+  $('#keep_demo').on('click', function() {
+    $('#reset_demo_modal').hide();
+  });
 });
