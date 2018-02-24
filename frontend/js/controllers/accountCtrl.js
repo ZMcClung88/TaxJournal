@@ -11,6 +11,14 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
     // console.log("logged user", user);
     mainSrvc.getUserEntries($rootScope.loggedUser).then(response => {
       // console.log("here i am", response);
+      if (response.length === 0) {
+        $scope.total = 0;
+        $scope.totalMiles = 0;
+        $scope.totalMeals = 0;
+        $scope.totalSupplies = 0;
+        $scope.totalLeisure = 0;
+      }
+
       $scope.entries = response;
       // sessionStorage.setItem("entries", JSON.stringify($scope.entries));
       // console.log("testing", sessionStorage.getItem("entries"));
