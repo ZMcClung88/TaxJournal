@@ -10,7 +10,7 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
     // let user = $rootScope.loggedUser;
     // console.log("logged user", user);
     mainSrvc.getUserEntries($rootScope.loggedUser).then(response => {
-      // console.log("here i am", response);
+      // console.log('here i am', response);
       if (response.length === 0) {
         $scope.total = 0;
         $scope.totalMiles = 0;
@@ -57,7 +57,7 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
           return entry.office_supplies;
         })
         .reduce((acc, cur) => (acc += cur));
-      console.log('total supply', $scope.totalSupplies);
+      // console.log('total supply', $scope.totalSupplies);
 
       $scope.totalLeisure = response
         .map(entry => {
