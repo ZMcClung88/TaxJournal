@@ -47,7 +47,7 @@
       </ul>
     </div> -->
 
-    <div class="singleEntry">
+    <div class="singleEntry" id="singleEntry">
       <ul>
         <li ng-hide="singleEntry.date == null"><p>Date: {{singleEntry.date | date: 'MMMM dd, yyyy'}}</p></li>
         <li ng-hide="singleEntry.time == null"><p>Time: {{singleEntry.time | date: 'hh:mm a'}}</p></li>
@@ -67,6 +67,9 @@
         <li ng-hide="totalMiles <= 0"><p>Total Mileage: {{totalMiles}}</p></li>
       </ul>
     </div>
+    <div class="edit_wrapper" id="edit_wrapper">
+
+    </div>
     <div class="delete_entry_modal" id="delete_entry_modal">
       <div class="delete_title">
         <h1>delete entry?</h1>
@@ -78,6 +81,7 @@
     </div>
     <div class="button">
       <a ui-sref="account"><i class="fas fa-arrow-left fa-4x"></i></a>
+      <a id="edit_button"><h1>edit</h1></a>
       <a id="delete_entry"><i class="fas fa-times fa-4x"></i></a>
       <!-- <a ng-click="deleteEntry(singleEntry.id)" ui-sref="account"><i class="fas fa-times fa-4x"></i></a> -->
       <!-- <button ui-sref="account" type="button" name="button"><i class="fas fa-arrow-left fa-4x"></i></button>

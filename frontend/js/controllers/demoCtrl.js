@@ -3,7 +3,7 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
 
   $scope.getAllEntries = () => {
     mainSrvc.getAllEntries().then(response => {
-      console.log('resposne', response);
+      console.log('response', response);
 
       if (response.length === 0) {
         $scope.total = 0;

@@ -43,4 +43,9 @@ angular.module('myApp').controller('singleEntryCtrl', function($scope, mainSrvc,
   $('#keep_entry').on('click', function() {
     $('#delete_entry_modal').hide();
   });
+
+  $('#edit_button').on('click', function() {
+    $('#edit_wrapper').show();
+    $('#singleEntry').hide();
+  });
 });
