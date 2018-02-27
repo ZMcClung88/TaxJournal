@@ -48,5 +48,7 @@ angular.module('myApp').controller('singleEntryCtrl', function($scope, mainSrvc,
     $('#edit_wrapper').show();
     $('#edit_wrapper').css('display', 'flex');
     $('#singleEntry').hide();
+    $('#save_button').show();
+    $('#edit_button').hide();
   });
 });
