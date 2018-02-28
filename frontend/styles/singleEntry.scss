@@ -122,18 +122,16 @@
           display: flex;
 
           input {
-            color: black;
-            font-size: 30px;
-            font-family: serif;
             border: none;
             background-color: lightgrey;
             margin-left: 9px;
-          }
-
-          input::placeholder {
             font-family: serif;
             color: black;
             font-size: 32px;
+            letter-spacing: 2px;
+          }
+
+          input::placeholder {
           }
 
           ::-webkit-input-placeholder {

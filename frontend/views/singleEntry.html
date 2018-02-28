@@ -69,22 +69,22 @@
     </div>
     <div class="edit_wrapper" id="edit_wrapper">
       <ul>
-        <li ng-hide="singleEntry.date == null"><p>Date:</p><input placeholder="{{singleEntry.date | date: 'MMMM dd, yyyy'}}"></input></li>
-        <li ng-hide="singleEntry.time == null"><p>Time:</p><input placeholder="{{singleEntry.time | date: 'hh:mm a'}}"></input></li>
-        <li ng-hide="singleEntry.location == null"><p>Location:</p><input placeholder="{{singleEntry.location}}"> </input></li>
-        <li ng-hide="singleEntry.who == null"><p>Who:</p><input placeholder="{{singleEntry.who}}"> </input></li>
-        <li ng-hide="singleEntry.why == null"><p>Why:</p><input placeholder="{{singleEntry.why}}"> </input></li>
-        <li ng-hide="singleEntry.breakfast == null"><p>Breakfast:</p><input placeholder=" ${{singleEntry.breakfast}}"></input></li>
-        <li ng-hide="singleEntry.lunch == null"><p>Lunch:</p><input placeholder="${{singleEntry.lunch}}"> </input></li>
-        <li ng-hide="singleEntry.dinner == null"><p>Dinner:</p><input placeholder="${{singleEntry.dinner}}"> </input></li>
-        <li ng-hide="singleEntry.golf == null"><p>Golf:</p><input placeholder="${{singleEntry.golf}}"> </input></li>
-        <li ng-hide="singleEntry.cocktails == null"><p>Cocktails:</p><input placeholder="${{singleEntry.cocktails}}"> </input></li>
-        <li ng-hide="singleEntry.office_supplies == null"><p>Office Supplies:</p><input placeholder=" ${{singleEntry.office_supplies}}"></input></li>
-        <li ng-hide="singleEntry.other == null"><p>Other:</p><input placeholder="${{singleEntry.other}}"> </input></li>
-        <li ng-hide="total == 0"><p>Total:</p><input placeholder=" ${{total}}"></input></li>
-        <li ng-hide="singleEntry.beg_miles == null"><p>Beginning Mileage:</p><input placeholder="{{singleEntry.beg_miles}}"> </input></li>
-        <li ng-hide="singleEntry.end_miles == null"><p>Ending Mileage:</p><input placeholder="{{singleEntry.end_miles}}"> </input></li>
-        <li ng-hide="totalMiles <= 0"><p>Total Mileage:</p><input placeholder="{{totalMiles}}"> </input></li>
+        <li ng-hide="singleEntry.date == null"><p>Date:</p><input value="{{singleEntry.date | date: 'MMMM dd, yyyy'}}"></input></li>
+        <li ng-hide="singleEntry.time == null"><p>Time:</p><input value="{{singleEntry.time | date: 'hh:mm a'}}"></input></li>
+        <li ng-hide="singleEntry.location == null"><p>Location:</p><input value="{{singleEntry.location}}"> </input></li>
+        <li ng-hide="singleEntry.who == null"><p>Who:</p><input value="{{singleEntry.who}}"> </input></li>
+        <li ng-hide="singleEntry.why == null"><p>Why:</p><input value="{{singleEntry.why}}"> </input></li>
+        <li ng-hide="singleEntry.breakfast == null"><p>Breakfast:</p><input value=" ${{singleEntry.breakfast}}"></input></li>
+        <li ng-hide="singleEntry.lunch == null"><p>Lunch:</p><input value="${{singleEntry.lunch}}"> </input></li>
+        <li ng-hide="singleEntry.dinner == null"><p>Dinner:</p><input value="${{singleEntry.dinner}}"> </input></li>
+        <li ng-hide="singleEntry.golf == null"><p>Golf:</p><input value="${{singleEntry.golf}}"> </input></li>
+        <li ng-hide="singleEntry.cocktails == null"><p>Cocktails:</p><input value="${{singleEntry.cocktails}}"> </input></li>
+        <li ng-hide="singleEntry.office_supplies == null"><p>Office Supplies:</p><input value=" ${{singleEntry.office_supplies}}"></input></li>
+        <li ng-hide="singleEntry.other == null"><p>Other:</p><input value="${{singleEntry.other}}"> </input></li>
+        <li ng-hide="total == 0"><p>Total:</p><input value=" ${{total}}"></input></li>
+        <li ng-hide="singleEntry.beg_miles == null"><p>Beginning Mileage:</p><input value="{{singleEntry.beg_miles}}"> </input></li>
+        <li ng-hide="singleEntry.end_miles == null"><p>Ending Mileage:</p><input value="{{singleEntry.end_miles}}"> </input></li>
+        <li ng-hide="totalMiles <= 0"><p>Total Mileage:</p><input value="{{totalMiles}}"> </input></li>
       </ul>
     </div>
     <div class="delete_entry_modal" id="delete_entry_modal">
