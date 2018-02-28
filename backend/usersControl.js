@@ -78,7 +78,7 @@ module.exports = {
     let id = req.body.id;
     let db = app.get('db');
 
-    console.log('usersControl', id);
+    // console.log('usersControl', id);
 
     db.userAddEntry(
       [
@@ -110,12 +110,37 @@ module.exports = {
     );
   },
 
+  updateEntry: (req, res) => {
+    let singleEntry = req.body.singleEntry;
+    let id = req.body.id;
+    let db = app.get('db');
+    console.log('updateEntry', id);
+
+    db.updateEntry([
+      id,
+      singleEntry.date,
+      singleEntry.time,
+      singleEntry.who,
+      singleEntry.location,
+      singleEntry.why,
+      singleEntry.breakfast,
+      singleEntry.lunch,
+      singleEntry.dinner,
+      singleEntry.golf,
+      singleEntry.cocktails,
+      singleEntry.office_supplies,
+      singleEntry.beg_miles,
+      singleEntry.end_miles,
+      singleEntry.other
+    ]);
+  },
+
   checkLoginStatus: (req, res) => {
-    console.log('Checking Login Status Of User');
+    // console.log('Checking Login Status Of User');
     if (req.session.user) {
-      console.log('Request.session is set');
+      // console.log('Request.session is set');
       // delete req.session.user.password;
-      console.log('userControl', req.session.user);
+      // console.log('userControl', req.session.user);
       res.status(200).send(req.session.user);
     } else {
       res.status(201).send();

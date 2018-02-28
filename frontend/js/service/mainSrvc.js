@@ -117,4 +117,15 @@ angular.module('myApp').service('mainSrvc', function($http, $rootScope) {
       return response.data;
     });
   };
+
+  this.updateEntry = (newEntry, id) => {
+    return $http({
+      method: 'PUT',
+      url: '/api/updateEntry',
+      data: {
+        newEntry,
+        id
+      }
+    }).then(response => response);
+  };
 });

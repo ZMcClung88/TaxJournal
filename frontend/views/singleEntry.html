@@ -81,10 +81,10 @@
         <li ng-hide="singleEntry.cocktails == null"><p>Cocktails:</p><input value="${{singleEntry.cocktails}}"> </input></li>
         <li ng-hide="singleEntry.office_supplies == null"><p>Office Supplies:</p><input value=" ${{singleEntry.office_supplies}}"></input></li>
         <li ng-hide="singleEntry.other == null"><p>Other:</p><input value="${{singleEntry.other}}"> </input></li>
-        <li ng-hide="total == 0"><p>Total:</p><input value=" ${{total}}"></input></li>
+        <li ng-hide="total == 0"><p>Total:</p><input placeholder=" ${{total}}"></input></li>
         <li ng-hide="singleEntry.beg_miles == null"><p>Beginning Mileage:</p><input value="{{singleEntry.beg_miles}}"> </input></li>
         <li ng-hide="singleEntry.end_miles == null"><p>Ending Mileage:</p><input value="{{singleEntry.end_miles}}"> </input></li>
-        <li ng-hide="totalMiles <= 0"><p>Total Mileage:</p><input value="{{totalMiles}}"> </input></li>
+        <li ng-hide="totalMiles <= 0"><p>Total Mileage:</p><input placeholder="{{totalMiles}}"> </input></li>
       </ul>
     </div>
     <div class="delete_entry_modal" id="delete_entry_modal">
@@ -99,7 +99,7 @@
     <div class="button">
       <a ui-sref="account"><i class="fas fa-arrow-left fa-4x"></i></a>
       <a id="edit_button"><h1>edit</h1></a>
-      <a id="save_button"><h1>save</h1></a>
+      <a id="save_button" ng-click="updateEntry(singleEntry.id, singleEntry)"><h1>save</h1></a>
       <a id="delete_entry"><i class="fas fa-times fa-4x"></i></a>
       <!-- <a ng-click="deleteEntry(singleEntry.id)" ui-sref="account"><i class="fas fa-times fa-4x"></i></a> -->
       <!-- <button ui-sref="account" type="button" name="button"><i class="fas fa-arrow-left fa-4x"></i></button>

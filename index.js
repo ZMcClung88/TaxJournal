@@ -96,6 +96,7 @@ app.get('/logout', function(req, res) {
   req.session.destroy();
 });
 app.post('/api/account', usersControl.getUserEntries);
+app.put('/api/updateEntry', usersControl.updateEntry);
 
 //// TEST ////
 app.get('/test', function(req, res) {

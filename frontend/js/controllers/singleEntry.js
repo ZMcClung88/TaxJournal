@@ -26,6 +26,13 @@ angular.module('myApp').controller('singleEntryCtrl', function($scope, mainSrvc,
     $state.reload();
   };
 
+  $scope.updateEntry = (id = $rootScope.loggedUser, singleEntry) => {
+    console.log('!!! trying to update entry !!!');
+    console.log(id, singleEntry);
+
+    mainSrvc.updateEntry().then();
+  };
+
   if ($rootScope.loggedUser) {
     // console.log("!!!singleEntry is working!!!")
     $('#login').hide();
