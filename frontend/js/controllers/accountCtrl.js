@@ -17,6 +17,8 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
         $scope.totalMeals = 0;
         $scope.totalSupplies = 0;
         $scope.totalLeisure = 0;
+
+        $('#need_entries').show().css({ color: 'red', 'margin-top': '50px' });
       }
 
       $scope.entries = response;

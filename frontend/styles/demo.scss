@@ -259,6 +259,10 @@
               align-items: center;
               background-color: white;
             }
+
+            #need_entries {
+              display: none;
+            }
           }
           .entry ul:hover {
             // height: 100%;
