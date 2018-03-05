@@ -43,7 +43,6 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
       console.log('total meals', $scope.totalMeals);
 
       $scope.date = response.map(entry => entry.date);
-      // console.log($scope.date)
 
       $scope.totalSupplies = response
         .map(entry => {
@@ -62,8 +61,6 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
   $scope.getAllEntries();
 
   $scope.addEntry = entry => {
-    // console.log('working here', entry)
-
     mainSrvc.addEntry(entry).then(response => {
       $scope.entry.date = '';
       $scope.entry.time = '';
@@ -90,10 +87,7 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
   };
 
   $scope.deleteDemoEntries = () => {
-    mainSrvc.deleteDemoEntries().then(response => {
-      // console.log('deleteDemoEntries working');
-      // console.log(response);
-    });
+    mainSrvc.deleteDemoEntries().then(response => {});
     $state.reload();
   };
 

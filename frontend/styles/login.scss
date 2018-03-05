@@ -1,11 +1,7 @@
 .main_login_wrapper {
-  // background-color: yellow;
   height: 100vh;
   width: 100%;
   display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-direction: column;
   background: #2193b0; /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #2193b0, #6dd5ed); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
@@ -20,10 +16,8 @@
     width: 99%;
     height: 10%;
     display: flex;
-    // flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    // background-color: lightgrey;
     padding-left: 20px;
     padding-right: 20px;
     position: fixed;
@@ -57,11 +51,9 @@
   .form_section {
     width: 100%;
     height: 100%;
-    // border: 1px solid green;
     display: flex;
     justify-content: center;
     align-items: center;
-    // margin-top: 11%;
 
     .form_fields {
       height: 50%;
@@ -69,7 +61,6 @@
       padding-bottom: 2.5%;
       border: 1px solid black;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      // background-color: lightgrey;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -79,20 +70,16 @@
       font-family: Arial;
 
       .user_login {
-        // border: 1px solid red;
         margin-bottom: 5%;
         font-size: 18px;
         font-family: Arial;
       }
 
       h1 {
-        // border: 2px solid red;
         width: 33%;
         height: 20%;
         font-size: 13px;
-        // font-weight: bold;
         letter-spacing: 1px;
-        // text-transform: uppercase;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -104,7 +91,6 @@
         height: 38px;
         width: 35%;
         border: none;
-        // border-radius: 5px;
         outline: none;
         border-bottom: 1px solid black;
         background-color: transparent;

@@ -13,9 +13,7 @@ angular.module('myApp').controller('singleEntryCtrl', function($scope, mainSrvc,
         response.cocktails +
         response.office_supplies +
         response.other;
-      // console.log('total', $scope.total);
       $scope.totalMiles = response.end_miles - response.beg_miles;
-      // console.log('miles', $scope.totalMiles);
     });
   };
   $scope.getSingleEntry();
@@ -34,11 +32,9 @@ angular.module('myApp').controller('singleEntryCtrl', function($scope, mainSrvc,
   };
 
   if ($rootScope.loggedUser) {
-    // console.log("!!!singleEntry is working!!!")
     $('#login').hide();
     $('#register').hide();
   } else {
-    // console.log("!!!im not working!!!")
     $('#account').hide();
   }
 

@@ -4,7 +4,6 @@ angular.module('myApp').controller('registerCtrl', function($scope, mainSrvc) {
     console.log('registerCtrl', user);
     if (flag) {
       mainSrvc.register(user).then(response => {
-        // console.log('register', response);
         $scope.user.first_name = '';
         $scope.user.last_name = '';
         $scope.user.email = '';
