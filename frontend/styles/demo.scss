@@ -9,7 +9,6 @@
   padding-right: 20px;
   position: fixed;
   font-family: sans-serif;
-  // background-color: lightgrey;
 
   a {
     text-decoration: none;
@@ -31,7 +30,6 @@
     padding-right: 50px;
 
     h1 {
-      // border: 2px solid red;
       margin-left: 15px;
     }
 
@@ -44,7 +42,6 @@
 .demo_wrapper {
   width: 100vw;
   height: 100vh;
-  // border: 1px solid green;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -59,14 +56,12 @@
   // background: url('/img/images/cathryn-lavery-67852.jpg') no-repeat center fixed;
 
   .demo_content {
-    // border: 1px solid blue;
     border-radius: 10px;
     width: 75vw;
     height: 65vh;
     margin-top: 5%;
     display: flex;
     background-color: white;
-    // flex-direction: row;
 
     .demo_display {
       width: 100%;
@@ -77,7 +72,6 @@
       .panel {
         height: 100%;
         width: 25%;
-        // border: 2px solid pink;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
@@ -85,10 +79,6 @@
         background-color: lightgrey;
 
         .reset-btn {
-          // margin-top: 5%;
-          // margin-bottom: -1.75%;
-          // margin-left: 15%;
-
           button {
             height: 40px;
             width: 120px;
@@ -108,27 +98,6 @@
         a:visited {
           color: black;
         }
-
-        // .panel_buttons {
-        //   // border: 2px solid limegreen;
-        //   height: 50%;
-        //   width: 75%;
-        //   display: flex;
-        //   flex-direction: column;
-        //   justify-content: space-between;
-        //
-        //   li {
-        //     border: 1px solid red;
-        //     height: 30%;
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-        //   }
-        //
-        //   li:hover {
-        //     background-color: red;
-        //   }
-        // }
       }
 
       .reset_demo_modal {
@@ -144,7 +113,6 @@
         text-align: center;
         box-shadow: 10px 10px 5px grey;
         padding: 25px;
-        // margin-top: 5%;
         margin-left: 15%;
 
         .reset_title {
@@ -156,13 +124,11 @@
         }
 
         .reset_demo_buttons {
-          // border: 1px solid blue;
           height: 75%;
           width: 50%;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          // margin-left: 22%;
 
           #keep_demo {
             color: red;
@@ -179,7 +145,6 @@
       .display {
         height: 100%;
         width: 75%;
-        // border: 2px solid purple;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -189,7 +154,6 @@
         #add {
           display: none;
           height: 100%;
-          // border: 1px solid blue;
           justify-content: center;
           align-items: center;
 
@@ -208,11 +172,9 @@
               height: 25px;
               width: 35%;
               outline: none;
-              // border: none;
             }
 
             .add_submit_button {
-              // border: 1px solid blue;
               width: 74%;
               display: flex;
               justify-content: center;
@@ -233,11 +195,9 @@
         #all {
           width: 90%;
           height: 70%;
-          // display: flex;
           justify-content: center;
           flex-direction: column;
           align-items: center;
-          // border: 1px solid red;
           overflow: scroll;
           padding-left: 10%;
 
@@ -246,7 +206,6 @@
             width: 90%;
             height: 75px;
             display: flex;
-            // justify-content: space-around;
             align-items: center;
             align-self: center;
             line-height: 30px;
@@ -265,52 +224,28 @@
             }
           }
           .entry ul:hover {
-            // height: 100%;
-            // width: 100%;
             background-color: lightblue;
             border: 2px solid blue;
-            // color: white;
           }
         }
 
         #graph {
           display: none;
 
-          // .chart {
-          //   border: 2px solid green;
-          //   height: 400px;
-          //   width: 500px;
-          //   display: flex;
-          //   justify-content: center;
-          //   align-items: center;
-          //
-          //   .chart div {
-          //     font: 10px sans-serif;
-          //     background-color: steelblue;
-          //     text-align: right;
-          //     padding: 3px;
-          //     margin: 1px;
-          //     color: white;
-          //   }
-          // }
-
           #account_wrapper {
             margin-bottom: 20px;
           }
 
           .wrapper {
-            // border: 2px solid black;
             height: 450px;
             width: 435px;
             margin-top: 20px;
             color: white;
             font-family: Tahoma;
-            // display: flex;
 
             span {
               font-size: 20px;
               font-weight: normal;
-              // color: red;
             }
 
             .block {
@@ -326,14 +261,12 @@
             }
 
             .row1 {
-              // border: 1px solid red;
               height: 31%;
               display: flex;
               justify-content: space-between;
 
               h1 {
                 font-size: 40px;
-                // font-weight: bold;
                 margin-bottom: 20px;
               }
 
@@ -343,19 +276,16 @@
             }
 
             .row2 {
-              // border: 1px solid red;
               height: 66%;
               display: flex;
               flex-direction: row;
 
               h1 {
                 font-size: 40px;
-                // font-weight: bold;
                 margin-bottom: 20px;
               }
 
               .row2_left {
-                // border: 1px solid pink;
                 width: 66%;
                 display: flex;
 
@@ -379,7 +309,6 @@
               }
 
               .row2_right {
-                // border: 1px solid pink;
                 width: 33%;
                 display: flex;
                 flex-direction: column;

@@ -1,16 +1,9 @@
 angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, mainSrvc, $location, $timeout, $state) {
   $scope.user = $rootScope.loggedUser;
   $scope.userId = $rootScope.loggedUser.user_id;
-  // sessionStorage.setItem("user", JSON.stringify($scope.user));
-  // sessionStorage.getItem("user");
-
-  // console.log("looking for storage", localStorage);
 
   $scope.getUserEntries = () => {
-    // let user = $rootScope.loggedUser;
-    // console.log("logged user", user);
     mainSrvc.getUserEntries($rootScope.loggedUser).then(response => {
-      // console.log('here i am', response);
       if (response.length === 0) {
         $scope.total = 0;
         $scope.totalMiles = 0;
@@ -19,11 +12,11 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
         $scope.totalLeisure = 0;
 
         $('#need_entries').show().css({ color: 'red', 'margin-top': '50px' });
+      } else {
+        $('#need_entries').hide();
       }
 
       $scope.entries = response;
-      // sessionStorage.setItem("entries", JSON.stringify($scope.entries));
-      // console.log("testing", sessionStorage.getItem("entries"));
 
       $scope.total = response
         .map(entry => {
@@ -52,14 +45,12 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
         .reduce((acc, cur) => (acc += cur));
 
       $scope.date = response.map(entry => entry.date);
-      // console.log($scope.date)
 
       $scope.totalSupplies = response
         .map(entry => {
           return entry.office_supplies;
         })
         .reduce((acc, cur) => (acc += cur));
-      // console.log('total supply', $scope.totalSupplies);
 
       $scope.totalLeisure = response
         .map(entry => {
@@ -72,7 +63,6 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
 
   $scope.userAddEntry = (entry, id) => {
     var id = $rootScope.loggedUser.user_id;
-    // console.log("working on date format", entry.date)
 
     mainSrvc.userAddEntry(entry, id).then(response => {
       $scope.entry.date = '';
@@ -100,22 +90,18 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
   };
 
   $scope.logOut = () => {
-    // console.log('logging out!');
     mainSrvc.logOut().then(response => {});
 
     $timeout(() => {
       $location.path('login');
-      //  $scope.$apply();
       $rootScope.$apply(($rootScope.loggedUser = false));
     }, 300);
   };
 
   if ($rootScope.loggedUser) {
-    // console.log("!!!im working!!!")
     $('#login').hide();
     $('#register').hide();
   } else {
-    // console.log("!!!im not working!!!")
     $('#account').hide();
     $('#home_greeting').hide();
   }

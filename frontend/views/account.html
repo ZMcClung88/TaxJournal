@@ -1,17 +1,3 @@
-<!-- <h1>ACCOUNT PAGE MFers</h1>
-<ul>
-  <li>Welcome, {{ user.first_name }}</li>
-  <li>{{ user.last_name }}</li>
-  <li>{{ user.email }}</li>
-</ul>
-
-<div class="" ng-repeat="e in entries">
-  <h1>{{ e.date }}</h1>
-  <h1>{{ e.time }}</h1>
-  <h1>{{ e.who }}</h1>
-  <h1>{{ e.location }}</h1>
-</div> -->
-
 <div class="demo_header">
   <div class="header_left">
     <img ui-sref="home" src="/img/images/Generic Book File Type-595b40b75ba036ed117d95f4.svg" alt="">
@@ -29,11 +15,6 @@
   <div class="demo_content">
     <div class="demo_display">
       <div class="panel">
-        <!-- <ul class="panel_buttons">
-          <li id="add-btn">Add</li>
-          <li id="all-btn">All</li>
-          <li id="graph-btn">Stats</li>
-        </ul> -->
         <a href="#" id="add-btn"><i class="fas fa-plus fa-4x"></a>
         <a href="#" id="all-btn"><i class="fas fa-book fa-4x"></a>
         <a href="#" id="graph-btn"><i class="fas fa-chart-area fa-4x"></a>
@@ -44,7 +25,6 @@
         <div class="add_form" id="add">
           <div class="entry-card">
             <form class="" name="entry_form" ng-submit="userAddEntry(entry)" method="post">
-              <!-- <input ng-model="entry.date" type="text" id="datepicker"> -->
               <input ng-model="entry.date" type="date" name="" value="2018-01-01" placeholder="Date" required>
               <input ng-model="entry.time" type="time" name="" value="04:20" placeholder="Time" required>
               <input ng-model="entry.who" type="text" name="" value="" placeholder="Who" required>
@@ -67,34 +47,18 @@
         </div>
 
         <div class="all" id="all">
-          <!-- <div class=""> -->
-            <div class="entry" ng-repeat="entry in entries" ui-sref="singleEntry({ id: entry.id })">
-              <!-- <p>{{entry.id}}</p> -->
-
-              <!-- <p>{{entry.location}}</p>
-
-              <p>${{entry.total3}}<p> -->
-              <ul class="entry_list">
-                <li>{{entry.date | date:'MMMM dd, yyyy'}}</li>
-                <li>{{entry.time | date: 'hh:mm a'}}</li>
-                <li>{{entry.location}}</li>
-              </ul>
-            </div>
-            <div id="need_entries">
-              <h1>You have zero (0) entries. Click the add (+) button to add your first entry.</h1>
-            </div>
-          <!-- </div> -->
+          <div class="entry" ng-repeat="entry in entries" ui-sref="singleEntry({ id: entry.id })">
+            <ul class="entry_list">
+              <li>{{entry.date | date:'MMMM dd, yyyy'}}</li>
+              <li>{{entry.time | date: 'hh:mm a'}}</li>
+              <li>{{entry.location}}</li>
+            </ul>
+          </div>
+          <div id="need_entries">
+            <h1>You have zero (0) entries. Click the add (+) button to add your first entry.</h1>
+          </div>
         </div>
         <div class="graph" id="graph">
-            <!-- <div class="chart">
-              <ul>
-                <li>Total Entries: {{ entries.length }}</li>
-                <li>Total Expenses: ${{ total }}</li>
-                <li>Total Meals: ${{ totalMeals }}</li>
-                <li>Total Miles: {{ totalMiles }}</li>
-              </ul>
-            </div>
-            <div bar-chartbar-height="20"bar-padding="5"></div> -->
             <div class="wrapper" id="account_wrapper">
               <div class="row1">
                 <div class="total_entries block">
@@ -131,8 +95,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
-
 </div>
