@@ -1,6 +1,7 @@
 angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootScope, $state) {
   $scope.user = $rootScope.loggedUser;
 
+  ////////////GETTING ALL ENTRIES FOR DEMO\\\\\\\\\\\\
   $scope.getAllEntries = () => {
     mainSrvc.getAllEntries().then(response => {
       console.log('response', response);
@@ -60,6 +61,7 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
   };
   $scope.getAllEntries();
 
+  ////////////ADDING AN ENTRY\\\\\\\\\\\\
   $scope.addEntry = entry => {
     mainSrvc.addEntry(entry).then(response => {
       $scope.entry.date = '';
@@ -86,6 +88,7 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
     });
   };
 
+  ////////////RESET/DELETE DEMO ENTRIES\\\\\\\\\\\\
   $scope.deleteDemoEntries = () => {
     mainSrvc.deleteDemoEntries().then(response => {});
     $state.reload();
@@ -100,7 +103,7 @@ angular.module('myApp').controller('demoCtrl', function($scope, mainSrvc, $rootS
     $('#account').hide();
     $('#home_greeting').hide();
   }
-
+  /////PANEL ACTION BUTTONS\\\\\
   $('#add-btn').on('click', function() {
     $('#add').show();
     $('#add').css('display', 'flex');

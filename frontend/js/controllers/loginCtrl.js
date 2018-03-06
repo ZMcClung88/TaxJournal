@@ -1,4 +1,5 @@
 angular.module('myApp').controller('loginCtrl', function($rootScope, $location, $scope, mainSrvc) {
+  ////////////LOG IN USER\\\\\\\\\\\\
   $scope.login = user => {
     let userEmail = user.email;
     let userPassword = user.password;

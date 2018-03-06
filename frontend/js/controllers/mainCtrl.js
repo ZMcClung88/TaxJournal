@@ -1,6 +1,6 @@
 angular.module('myApp').controller('mainCtrl', function($scope, mainSrvc, $rootScope) {
   $scope.user = $rootScope.loggedUser;
-
+  ////////////GETTING ALL ENTRIES\\\\\\\\\\\\
   $scope.getAllEntries = () => {
     mainSrvc.getAllEntries().then(response => {
       $scope.entries = response;

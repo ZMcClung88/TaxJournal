@@ -1,6 +1,7 @@
 angular.module('myApp').controller('singleDemoCtrl', function($scope, mainSrvc, $stateParams, $rootScope) {
   $scope.user = $rootScope.loggedUser;
 
+  ////////////GETTING ONE DEMO ENTRY\\\\\\\\\\\\
   $scope.getSingleDemo = () => {
     mainSrvc.getSingleDemo($stateParams.id).then(function(response) {
       $scope.singleDemo = response.data[0];

@@ -1,4 +1,5 @@
 angular.module('myApp').controller('registerCtrl', function($scope, mainSrvc) {
+  ////////////REGISTERING A USER\\\\\\\\\\\\
   $scope.register = user => {
     let flag = true;
     console.log('registerCtrl', user);

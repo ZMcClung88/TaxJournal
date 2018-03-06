@@ -1,6 +1,6 @@
 angular.module('myApp').controller('singleEntryCtrl', function($scope, mainSrvc, $state, $stateParams, $rootScope) {
   $scope.user = $rootScope.loggedUser;
-
+  ////////////GETTING ONE USER ENTRY\\\\\\\\\\\\
   $scope.getSingleEntry = () => {
     mainSrvc.getSingleEntry($stateParams.id).then(function(response) {
       $scope.singleEntry = response;
@@ -18,12 +18,14 @@ angular.module('myApp').controller('singleEntryCtrl', function($scope, mainSrvc,
   };
   $scope.getSingleEntry();
 
+  ////////////DELETING AN ENTRY\\\\\\\\\\\\
   $scope.deleteEntry = id => {
     console.log('delete button', id);
     mainSrvc.deleteEntry(id);
     $state.reload();
   };
 
+  //////////// UPDATE ENTRY - NEED TO FIX \\\\\\\\\\\\
   $scope.updateEntry = (id = $rootScope.loggedUser, singleEntry) => {
     console.log('!!! trying to update entry !!!');
     console.log(id, singleEntry);
