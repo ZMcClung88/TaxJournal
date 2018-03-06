@@ -2,6 +2,7 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
   $scope.user = $rootScope.loggedUser;
   $scope.userId = $rootScope.loggedUser.user_id;
 
+  ////////////GET ALL USER ENTRIES\\\\\\\\\\\\
   $scope.getUserEntries = () => {
     mainSrvc.getUserEntries($rootScope.loggedUser).then(response => {
       if (response.length === 0) {
@@ -61,6 +62,7 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
   };
   $scope.getUserEntries();
 
+  ////////////USER ADD ENTRY\\\\\\\\\\\\
   $scope.userAddEntry = (entry, id) => {
     var id = $rootScope.loggedUser.user_id;
 
@@ -89,6 +91,7 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
     $state.reload();
   };
 
+  ////////////LOGOUT USER\\\\\\\\\\\\
   $scope.logOut = () => {
     mainSrvc.logOut().then(response => {});
 
@@ -105,7 +108,7 @@ angular.module('myApp').controller('accountCtrl', function($rootScope, $scope, m
     $('#account').hide();
     $('#home_greeting').hide();
   }
-
+  /////TOGGLE ACTION BUTTONS\\\\\
   $('#add-btn').on('click', function() {
     $('#add').show();
     $('#add').css('display', 'flex');
